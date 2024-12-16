@@ -1,0 +1,4 @@
+{
+    "root": "server",
+    "start": "cd server && node server.js"
+  }

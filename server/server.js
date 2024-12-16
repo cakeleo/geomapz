@@ -9,6 +9,9 @@ import jwt from 'jsonwebtoken';
 import { fileURLToPath } from 'url';
 import { User } from './models/User.js';  // Updated import
 
+import { createServer } from 'http';
+
+
 // ES Module fix for __dirname
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -113,6 +116,11 @@ app.post('/api/register', async (req, res) => {
   }
 });
 
+app.get('/ping', (req, res) => {
+  res.status(200).send('OK');
+});
+
+
 // Login endpoint
 app.post('/api/login', async (req, res) => {
   try {
@@ -190,7 +198,22 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Something broke!' });
 });
 
-// Start server
 app.listen(port, () => {
+  const startTime = new Date().toISOString();
+  console.log(`Server awakened at ${startTime}`);
   console.log(`Server running at http://localhost:${port}`);
 });
+
+const pingInterval = 4 * 60 * 1000; // 4 minutes
+const wake = () => {
+  try {
+    const options = {
+      host: 'your-project-name.glitch.me',
+      path: '/ping'
+    };
+    createServer().request(options).end();
+  } catch (err) {
+    console.log('Ping error:', err);
+  }
+};
+setInterval(wake, pingInterval);
