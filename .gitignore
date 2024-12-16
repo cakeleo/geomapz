@@ -4,6 +4,7 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 pnpm-debug.log*
 lerna-debug.log*
 
@@ -38,6 +39,11 @@ node_modules/
 
 
 
+=======
+lerna-debug.log*
+.pnpm-debug.log*
+
+>>>>>>> e027e3a69e7a0027c0b7d387f6141161da9f238f
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -159,6 +165,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+<<<<<<< HEAD
 
 # Dependencies
 node_modules/
@@ -185,3 +192,5 @@ yarn-error.log
 # OS specific
 .DS_Store
 Thumbs.db
+=======
+>>>>>>> e027e3a69e7a0027c0b7d387f6141161da9f238f
