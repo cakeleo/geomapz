@@ -208,7 +208,7 @@ const pingInterval = 4 * 60 * 1000; // 4 minutes
 const wake = () => {
   try {
     const options = {
-      host: 'your-project-name.glitch.me',
+      host: 'geomapz.glitch.me', // Update this with your actual Glitch project name
       path: '/ping'
     };
     createServer().request(options).end();
