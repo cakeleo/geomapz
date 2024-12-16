@@ -1,0 +1,14 @@
+{
+  "id": "USA",
+  "names": {
+    "local": "United States of America",
+    "english": "United States of America"
+  },
+  "capital": "Unknown",
+  "population": 328239523,
+  "currency": "Unknown",
+  "languages": [],
+  "region": "North America",
+  "subregion": "Northern America",
+  "summary": "United States is located in Northern America."
+}

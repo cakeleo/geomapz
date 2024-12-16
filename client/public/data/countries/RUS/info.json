@@ -1,0 +1,14 @@
+{
+  "id": "RUS",
+  "names": {
+    "local": "Russia",
+    "english": "Russia"
+  },
+  "capital": "Unknown",
+  "population": 144373535,
+  "currency": "Unknown",
+  "languages": [],
+  "region": "Europe & Central Asia",
+  "subregion": "Eastern Europe",
+  "summary": "Russian Federation is located in Eastern Europe."
+}

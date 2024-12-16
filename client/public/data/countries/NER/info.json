@@ -1,0 +1,14 @@
+{
+  "id": "NER",
+  "names": {
+    "local": "Niger",
+    "english": "Niger"
+  },
+  "capital": "Unknown",
+  "population": 23310715,
+  "currency": "Unknown",
+  "languages": [],
+  "region": "Sub-Saharan Africa",
+  "subregion": "Western Africa",
+  "summary": "Niger is located in Western Africa."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ETH",
+  "names": {
+    "local": "Ethiopia",
+    "english": "Ethiopia"
+  },
+  "capital": "Unknown",
+  "population": 112078730,
+  "currency": "Unknown",
+  "languages": [],
+  "region": "Sub-Saharan Africa",
+  "subregion": "Eastern Africa",
+  "summary": "Ethiopia is located in Eastern Africa."
+}

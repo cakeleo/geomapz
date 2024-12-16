@@ -1,0 +1,38 @@
+/* src/components/Map.css */
+.map-container {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
+}
+
+.map-path {
+  transition: fill 0.3s ease;
+  pointer-events: all;
+}
+
+.map-svg {
+  touch-action: none;
+  outline: none;
+}
+
+.map-group {
+  will-change: transform;
+}
+
+.map-path.hovered {
+  stroke-width: 2px !important; /* Adjust value as needed */
+  z-index: 1;
+}
+
+.map-path {
+  stroke: #000;
+  stroke-width: 0.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.map-path.hovered {
+  stroke: #ff9f43;
+  stroke-width: 15;
+  vector-effect: non-scaling-stroke;
+}

@@ -1,0 +1,12 @@
+#map-container {
+    position: relative;
+    width: 100vh;
+    height: 100vh;
+  }
+  
+  .info-box {
+    pointer-events: none;
+    z-index: 1000;
+  }
+  
+  /* Add any other global styles */

@@ -1,0 +1,14 @@
+{
+  "id": "CAN",
+  "names": {
+    "local": "Canada",
+    "english": "Canada"
+  },
+  "capital": "Unknown",
+  "population": 37589262,
+  "currency": "Unknown",
+  "languages": [],
+  "region": "North America",
+  "subregion": "Northern America",
+  "summary": "Canada is located in Northern America."
+}

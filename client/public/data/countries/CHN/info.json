@@ -1,0 +1,14 @@
+{
+  "id": "CHN",
+  "names": {
+    "local": "China",
+    "english": "People's Republic of China"
+  },
+  "capital": "Unknown",
+  "population": 1397715000,
+  "currency": "Unknown",
+  "languages": [],
+  "region": "East Asia & Pacific",
+  "subregion": "Eastern Asia",
+  "summary": "China is located in Eastern Asia."
+}

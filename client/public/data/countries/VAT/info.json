@@ -1,0 +1,14 @@
+{
+  "id": "VAT",
+  "names": {
+    "local": "Vatican",
+    "english": "Vatican City"
+  },
+  "capital": "Unknown",
+  "population": 825,
+  "currency": "Unknown",
+  "languages": [],
+  "region": "Europe & Central Asia",
+  "subregion": "Southern Europe",
+  "summary": "Vatican is located in Southern Europe."
+}

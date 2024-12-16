@@ -1,0 +1,14 @@
+{
+  "id": "ATA",
+  "names": {
+    "local": "Antarctica",
+    "english": "Antarctica"
+  },
+  "capital": "Unknown",
+  "population": 4490,
+  "currency": "Unknown",
+  "languages": [],
+  "region": "Antarctica",
+  "subregion": "Antarctica",
+  "summary": "Antarctica is located in Antarctica."
+}

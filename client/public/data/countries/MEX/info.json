@@ -1,0 +1,14 @@
+{
+  "id": "MEX",
+  "names": {
+    "local": "Mexico",
+    "english": "Mexico"
+  },
+  "capital": "Unknown",
+  "population": 127575529,
+  "currency": "Unknown",
+  "languages": [],
+  "region": "Latin America & Caribbean",
+  "subregion": "Central America",
+  "summary": "Mexico is located in Central America."
+}
