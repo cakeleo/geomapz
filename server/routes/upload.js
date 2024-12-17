@@ -1,10 +1,11 @@
 import express from 'express';
 import multer from 'multer';
-import { auth } from '../middleware/auth.js';
 import cloudinary from '../config/cloudinary.js';
+import { authMiddleware } from '../middleware/auth.js';
 
-const uploadRouter = express.Router();
+const router = express.Router();
 
+// Configure multer for memory storage
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: {
@@ -12,41 +13,34 @@ const upload = multer({
   }
 });
 
-uploadRouter.post('/', auth, upload.single('image'), async (req, res) => {
+// Image upload endpoint
+router.post('/image', authMiddleware , upload.single('image'), async (req, res) => {
   try {
     if (!req.file) {
-      return res.status(400).json({ error: 'No file uploaded' });
+      return res.status(400).json({ error: 'No image file provided' });
     }
 
-    const base64Image = req.file.buffer.toString('base64');
-    const dataURI = `data:${req.file.mimetype};base64,${base64Image}`;
+    // Convert buffer to base64
+    const b64 = Buffer.from(req.file.buffer).toString('base64');
+    const dataURI = `data:${req.file.mimetype};base64,${b64}`;
 
+    // Upload to Cloudinary
     const result = await cloudinary.uploader.upload(dataURI, {
-      folder: `geomap/${req.user._id}`,
+      folder: 'geoguessrapp',
       resource_type: 'auto'
     });
-    
-    res.json({ 
-      success: true, 
-      imageUrl: result.secure_url 
-    });
 
+    res.json({
+      success: true,
+      imageUrl: result.secure_url
+    });
   } catch (error) {
     console.error('Upload error:', error);
-    res.status(500).json({ error: 'Upload failed' });
+    res.status(500).json({
+      error: 'Failed to upload image',
+      details: error.message
+    });
   }
 });
 
-uploadRouter.delete('/:countryId/:imageIndex', auth, async (req, res) => {
-  try {
-    const { countryId, imageIndex } = req.params;
-    // Implementation for deleting from Cloudinary and updating database
-    res.json({ success: true });
-  } catch (error) {
-    console.error('Delete error:', error);
-    res.status(500).json({ error: 'Delete failed' });
-  }
-});
-
-export default uploadRouter;
-
+export default router;

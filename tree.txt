@@ -1,0 +1,2007 @@
+Folder PATH listing
+Volume serial number is 12DF-EFA2
+C:.
++---.vercel
+¦   +---cache
++---client
+¦   +---.vercel
+¦   ¦   +---cache
+¦   +---dist
+¦   ¦   +---assets
+¦   ¦   +---data
+¦   ¦       +---countries
+¦   ¦           +---ABW
+¦   ¦           ¦   +---images
+¦   ¦           +---AFG
+¦   ¦           ¦   +---images
+¦   ¦           +---AGO
+¦   ¦           ¦   +---images
+¦   ¦           +---AIA
+¦   ¦           ¦   +---images
+¦   ¦           +---ALA
+¦   ¦           ¦   +---images
+¦   ¦           +---ALB
+¦   ¦           ¦   +---images
+¦   ¦           +---AND
+¦   ¦           ¦   +---images
+¦   ¦           +---ARE
+¦   ¦           ¦   +---images
+¦   ¦           +---ARG
+¦   ¦           ¦   +---images
+¦   ¦           +---ARM
+¦   ¦           ¦   +---images
+¦   ¦           +---ASM
+¦   ¦           ¦   +---images
+¦   ¦           +---ATA
+¦   ¦           ¦   +---images
+¦   ¦           +---ATF
+¦   ¦           ¦   +---images
+¦   ¦           +---ATG
+¦   ¦           ¦   +---images
+¦   ¦           +---AUS
+¦   ¦           ¦   +---images
+¦   ¦           +---AUT
+¦   ¦           ¦   +---images
+¦   ¦           +---AZE
+¦   ¦           ¦   +---images
+¦   ¦           +---BDI
+¦   ¦           ¦   +---images
+¦   ¦           +---BEL
+¦   ¦           ¦   +---images
+¦   ¦           +---BEN
+¦   ¦           ¦   +---images
+¦   ¦           +---BFA
+¦   ¦           ¦   +---images
+¦   ¦           +---BGD
+¦   ¦           ¦   +---images
+¦   ¦           +---BGR
+¦   ¦           ¦   +---images
+¦   ¦           +---BHR
+¦   ¦           ¦   +---images
+¦   ¦           +---BHS
+¦   ¦           ¦   +---images
+¦   ¦           +---BIH
+¦   ¦           ¦   +---images
+¦   ¦           +---BLM
+¦   ¦           ¦   +---images
+¦   ¦           +---BLR
+¦   ¦           ¦   +---images
+¦   ¦           +---BLZ
+¦   ¦           ¦   +---images
+¦   ¦           +---BMU
+¦   ¦           ¦   +---images
+¦   ¦           +---BOL
+¦   ¦           ¦   +---images
+¦   ¦           +---BRA
+¦   ¦           ¦   +---images
+¦   ¦           +---BRB
+¦   ¦           ¦   +---images
+¦   ¦           +---BRN
+¦   ¦           ¦   +---images
+¦   ¦           +---BTN
+¦   ¦           ¦   +---images
+¦   ¦           +---BWA
+¦   ¦           ¦   +---images
+¦   ¦           +---CAF
+¦   ¦           ¦   +---images
+¦   ¦           +---CAN
+¦   ¦           ¦   +---images
+¦   ¦           +---CHE
+¦   ¦           ¦   +---images
+¦   ¦           +---CHL
+¦   ¦           ¦   +---images
+¦   ¦           +---CHN
+¦   ¦           ¦   +---images
+¦   ¦           +---CIV
+¦   ¦           ¦   +---images
+¦   ¦           +---CMR
+¦   ¦           ¦   +---images
+¦   ¦           +---COD
+¦   ¦           ¦   +---images
+¦   ¦           +---COG
+¦   ¦           ¦   +---images
+¦   ¦           +---COK
+¦   ¦           ¦   +---images
+¦   ¦           +---COL
+¦   ¦           ¦   +---images
+¦   ¦           +---COM
+¦   ¦           ¦   +---images
+¦   ¦           +---CPV
+¦   ¦           ¦   +---images
+¦   ¦           +---CRI
+¦   ¦           ¦   +---images
+¦   ¦           +---CUB
+¦   ¦           ¦   +---images
+¦   ¦           +---CUW
+¦   ¦           ¦   +---images
+¦   ¦           +---CYM
+¦   ¦           ¦   +---images
+¦   ¦           +---CYP
+¦   ¦           ¦   +---images
+¦   ¦           +---CZE
+¦   ¦           ¦   +---images
+¦   ¦           +---DEU
+¦   ¦           ¦   +---images
+¦   ¦           +---DJI
+¦   ¦           ¦   +---images
+¦   ¦           +---DMA
+¦   ¦           ¦   +---images
+¦   ¦           +---DNK
+¦   ¦           ¦   +---images
+¦   ¦           +---DOM
+¦   ¦           ¦   +---images
+¦   ¦           +---DZA
+¦   ¦           ¦   +---images
+¦   ¦           +---ECU
+¦   ¦           ¦   +---images
+¦   ¦           +---EGY
+¦   ¦           ¦   +---images
+¦   ¦           +---ERI
+¦   ¦           ¦   +---images
+¦   ¦           +---ESH
+¦   ¦           ¦   +---images
+¦   ¦           +---ESP
+¦   ¦           ¦   +---images
+¦   ¦           +---EST
+¦   ¦           ¦   +---images
+¦   ¦           +---ETH
+¦   ¦           ¦   +---images
+¦   ¦           +---FIN
+¦   ¦           ¦   +---images
+¦   ¦           +---FJI
+¦   ¦           ¦   +---images
+¦   ¦           +---FLK
+¦   ¦           ¦   +---images
+¦   ¦           +---FRA
+¦   ¦           ¦   +---images
+¦   ¦           +---FRO
+¦   ¦           ¦   +---images
+¦   ¦           +---FSM
+¦   ¦           ¦   +---images
+¦   ¦           +---GAB
+¦   ¦           ¦   +---images
+¦   ¦           +---GBR
+¦   ¦           ¦   +---images
+¦   ¦           +---GEO
+¦   ¦           ¦   +---images
+¦   ¦           +---GGY
+¦   ¦           ¦   +---images
+¦   ¦           +---GHA
+¦   ¦           ¦   +---images
+¦   ¦           +---GIN
+¦   ¦           ¦   +---images
+¦   ¦           +---GMB
+¦   ¦           ¦   +---images
+¦   ¦           +---GNB
+¦   ¦           ¦   +---images
+¦   ¦           +---GNQ
+¦   ¦           ¦   +---images
+¦   ¦           +---GRC
+¦   ¦           ¦   +---images
+¦   ¦           +---GRD
+¦   ¦           ¦   +---images
+¦   ¦           +---GRL
+¦   ¦           ¦   +---images
+¦   ¦           +---GTM
+¦   ¦           ¦   +---images
+¦   ¦           +---GUM
+¦   ¦           ¦   +---images
+¦   ¦           +---GUY
+¦   ¦           ¦   +---images
+¦   ¦           +---HKG
+¦   ¦           ¦   +---images
+¦   ¦           +---HMD
+¦   ¦           ¦   +---images
+¦   ¦           +---HND
+¦   ¦           ¦   +---images
+¦   ¦           +---HRV
+¦   ¦           ¦   +---images
+¦   ¦           +---HTI
+¦   ¦           ¦   +---images
+¦   ¦           +---HUN
+¦   ¦           ¦   +---images
+¦   ¦           +---IDN
+¦   ¦           ¦   +---images
+¦   ¦           +---IMN
+¦   ¦           ¦   +---images
+¦   ¦           +---IND
+¦   ¦           ¦   +---images
+¦   ¦           +---IOT
+¦   ¦           ¦   +---images
+¦   ¦           +---IRL
+¦   ¦           ¦   +---images
+¦   ¦           +---IRN
+¦   ¦           ¦   +---images
+¦   ¦           +---IRQ
+¦   ¦           ¦   +---images
+¦   ¦           +---ISL
+¦   ¦           ¦   +---images
+¦   ¦           +---ISR
+¦   ¦           ¦   +---images
+¦   ¦           +---ITA
+¦   ¦           ¦   +---images
+¦   ¦           +---JAM
+¦   ¦           ¦   +---images
+¦   ¦           +---JEY
+¦   ¦           ¦   +---images
+¦   ¦           +---JOR
+¦   ¦           ¦   +---images
+¦   ¦           +---JPN
+¦   ¦           ¦   +---images
+¦   ¦           +---KAZ
+¦   ¦           ¦   +---images
+¦   ¦           +---KEN
+¦   ¦           ¦   +---images
+¦   ¦           +---KGZ
+¦   ¦           ¦   +---images
+¦   ¦           +---KHM
+¦   ¦           ¦   +---images
+¦   ¦           +---KIR
+¦   ¦           ¦   +---images
+¦   ¦           +---KNA
+¦   ¦           ¦   +---images
+¦   ¦           +---KOR
+¦   ¦           ¦   +---images
+¦   ¦           +---KWT
+¦   ¦           ¦   +---images
+¦   ¦           +---LAO
+¦   ¦           ¦   +---images
+¦   ¦           +---LBN
+¦   ¦           ¦   +---images
+¦   ¦           +---LBR
+¦   ¦           ¦   +---images
+¦   ¦           +---LBY
+¦   ¦           ¦   +---images
+¦   ¦           +---LCA
+¦   ¦           ¦   +---images
+¦   ¦           +---LIE
+¦   ¦           ¦   +---images
+¦   ¦           +---LKA
+¦   ¦           ¦   +---images
+¦   ¦           +---LSO
+¦   ¦           ¦   +---images
+¦   ¦           +---LTU
+¦   ¦           ¦   +---images
+¦   ¦           +---LUX
+¦   ¦           ¦   +---images
+¦   ¦           +---LVA
+¦   ¦           ¦   +---images
+¦   ¦           +---MAC
+¦   ¦           ¦   +---images
+¦   ¦           +---MAF
+¦   ¦           ¦   +---images
+¦   ¦           +---MAR
+¦   ¦           ¦   +---images
+¦   ¦           +---MCO
+¦   ¦           ¦   +---images
+¦   ¦           +---MDA
+¦   ¦           ¦   +---images
+¦   ¦           +---MDG
+¦   ¦           ¦   +---images
+¦   ¦           +---MDV
+¦   ¦           ¦   +---images
+¦   ¦           +---MEX
+¦   ¦           ¦   +---images
+¦   ¦           +---MHL
+¦   ¦           ¦   +---images
+¦   ¦           +---MKD
+¦   ¦           ¦   +---images
+¦   ¦           +---MLI
+¦   ¦           ¦   +---images
+¦   ¦           +---MLT
+¦   ¦           ¦   +---images
+¦   ¦           +---MMR
+¦   ¦           ¦   +---images
+¦   ¦           +---MNE
+¦   ¦           ¦   +---images
+¦   ¦           +---MNG
+¦   ¦           ¦   +---images
+¦   ¦           +---MNP
+¦   ¦           ¦   +---images
+¦   ¦           +---MOZ
+¦   ¦           ¦   +---images
+¦   ¦           +---MRT
+¦   ¦           ¦   +---images
+¦   ¦           +---MSR
+¦   ¦           ¦   +---images
+¦   ¦           +---MUS
+¦   ¦           ¦   +---images
+¦   ¦           +---MWI
+¦   ¦           ¦   +---images
+¦   ¦           +---MYS
+¦   ¦           ¦   +---images
+¦   ¦           +---NAM
+¦   ¦           ¦   +---images
+¦   ¦           +---NCL
+¦   ¦           ¦   +---images
+¦   ¦           +---NER
+¦   ¦           ¦   +---images
+¦   ¦           +---NFK
+¦   ¦           ¦   +---images
+¦   ¦           +---NGA
+¦   ¦           ¦   +---images
+¦   ¦           +---NIC
+¦   ¦           ¦   +---images
+¦   ¦           +---NIU
+¦   ¦           ¦   +---images
+¦   ¦           +---NLD
+¦   ¦           ¦   +---images
+¦   ¦           +---NPL
+¦   ¦           ¦   +---images
+¦   ¦           +---NRU
+¦   ¦           ¦   +---images
+¦   ¦           +---NZL
+¦   ¦           ¦   +---images
+¦   ¦           +---OMN
+¦   ¦           ¦   +---images
+¦   ¦           +---PAK
+¦   ¦           ¦   +---images
+¦   ¦           +---PAN
+¦   ¦           ¦   +---images
+¦   ¦           +---PCN
+¦   ¦           ¦   +---images
+¦   ¦           +---PER
+¦   ¦           ¦   +---images
+¦   ¦           +---PHL
+¦   ¦           ¦   +---images
+¦   ¦           +---PLW
+¦   ¦           ¦   +---images
+¦   ¦           +---PNG
+¦   ¦           ¦   +---images
+¦   ¦           +---POL
+¦   ¦           ¦   +---images
+¦   ¦           +---PRI
+¦   ¦           ¦   +---images
+¦   ¦           +---PRK
+¦   ¦           ¦   +---images
+¦   ¦           +---PRT
+¦   ¦           ¦   +---images
+¦   ¦           +---PRY
+¦   ¦           ¦   +---images
+¦   ¦           +---PSE
+¦   ¦           ¦   +---images
+¦   ¦           +---PYF
+¦   ¦           ¦   +---images
+¦   ¦           +---QAT
+¦   ¦           ¦   +---images
+¦   ¦           +---ROU
+¦   ¦           ¦   +---images
+¦   ¦           +---RUS
+¦   ¦           ¦   +---images
+¦   ¦           +---RWA
+¦   ¦           ¦   +---images
+¦   ¦           +---SAU
+¦   ¦           ¦   +---images
+¦   ¦           +---SDN
+¦   ¦           ¦   +---images
+¦   ¦           +---SEN
+¦   ¦           ¦   +---images
+¦   ¦           +---SGP
+¦   ¦           ¦   +---images
+¦   ¦           +---SGS
+¦   ¦           ¦   +---images
+¦   ¦           +---SHN
+¦   ¦           ¦   +---images
+¦   ¦           +---SLB
+¦   ¦           ¦   +---images
+¦   ¦           +---SLE
+¦   ¦           ¦   +---images
+¦   ¦           +---SLV
+¦   ¦           ¦   +---images
+¦   ¦           +---SMR
+¦   ¦           ¦   +---images
+¦   ¦           +---SOM
+¦   ¦           ¦   +---images
+¦   ¦           +---SPM
+¦   ¦           ¦   +---images
+¦   ¦           +---SRB
+¦   ¦           ¦   +---images
+¦   ¦           +---SSD
+¦   ¦           ¦   +---images
+¦   ¦           +---STP
+¦   ¦           ¦   +---images
+¦   ¦           +---SUR
+¦   ¦           ¦   +---images
+¦   ¦           +---SVK
+¦   ¦           ¦   +---images
+¦   ¦           +---SVN
+¦   ¦           ¦   +---images
+¦   ¦           +---SWE
+¦   ¦           ¦   +---images
+¦   ¦           +---SWZ
+¦   ¦           ¦   +---images
+¦   ¦           +---SXM
+¦   ¦           ¦   +---images
+¦   ¦           +---SYC
+¦   ¦           ¦   +---images
+¦   ¦           +---SYR
+¦   ¦           ¦   +---images
+¦   ¦           +---TCA
+¦   ¦           ¦   +---images
+¦   ¦           +---TCD
+¦   ¦           ¦   +---images
+¦   ¦           +---TGO
+¦   ¦           ¦   +---images
+¦   ¦           +---THA
+¦   ¦           ¦   +---images
+¦   ¦           +---TJK
+¦   ¦           ¦   +---images
+¦   ¦           +---TKM
+¦   ¦           ¦   +---images
+¦   ¦           +---TLS
+¦   ¦           ¦   +---images
+¦   ¦           +---TON
+¦   ¦           ¦   +---images
+¦   ¦           +---TTO
+¦   ¦           ¦   +---images
+¦   ¦           +---TUN
+¦   ¦           ¦   +---images
+¦   ¦           +---TUR
+¦   ¦           ¦   +---images
+¦   ¦           +---TUV
+¦   ¦           ¦   +---images
+¦   ¦           +---TWN
+¦   ¦           ¦   +---images
+¦   ¦           +---TZA
+¦   ¦           ¦   +---images
+¦   ¦           +---UGA
+¦   ¦           ¦   +---images
+¦   ¦           +---UKR
+¦   ¦           ¦   +---images
+¦   ¦           +---URY
+¦   ¦           ¦   +---images
+¦   ¦           +---USA
+¦   ¦           ¦   +---images
+¦   ¦           +---UZB
+¦   ¦           ¦   +---images
+¦   ¦           +---VAT
+¦   ¦           ¦   +---images
+¦   ¦           +---VCT
+¦   ¦           ¦   +---images
+¦   ¦           +---VEN
+¦   ¦           ¦   +---images
+¦   ¦           +---VGB
+¦   ¦           ¦   +---images
+¦   ¦           +---VIR
+¦   ¦           ¦   +---images
+¦   ¦           +---VNM
+¦   ¦           ¦   +---images
+¦   ¦           +---VUT
+¦   ¦           ¦   +---images
+¦   ¦           +---WLF
+¦   ¦           ¦   +---images
+¦   ¦           +---WSM
+¦   ¦           ¦   +---images
+¦   ¦           +---YEM
+¦   ¦           ¦   +---images
+¦   ¦           +---ZAF
+¦   ¦           ¦   +---images
+¦   ¦           +---ZMB
+¦   ¦           ¦   +---images
+¦   ¦           +---ZWE
+¦   ¦               +---images
+¦   +---node_modules
+¦   ¦   +---.bin
+¦   ¦   +---.vite
+¦   ¦   ¦   +---deps
+¦   ¦   +---@ampproject
+¦   ¦   ¦   +---remapping
+¦   ¦   ¦       +---dist
+¦   ¦   ¦           +---types
+¦   ¦   +---@babel
+¦   ¦   ¦   +---code-frame
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   +---compat-data
+¦   ¦   ¦   ¦   +---data
+¦   ¦   ¦   +---core
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   ¦   ¦   +---config
+¦   ¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   ¦   +---helpers
+¦   ¦   ¦   ¦   ¦   ¦   +---validation
+¦   ¦   ¦   ¦   ¦   +---errors
+¦   ¦   ¦   ¦   ¦   +---gensync-utils
+¦   ¦   ¦   ¦   ¦   +---parser
+¦   ¦   ¦   ¦   ¦   ¦   +---util
+¦   ¦   ¦   ¦   ¦   +---tools
+¦   ¦   ¦   ¦   ¦   +---transformation
+¦   ¦   ¦   ¦   ¦   ¦   +---file
+¦   ¦   ¦   ¦   ¦   ¦   +---util
+¦   ¦   ¦   ¦   ¦   +---vendor
+¦   ¦   ¦   ¦   +---src
+¦   ¦   ¦   ¦       +---config
+¦   ¦   ¦   ¦           +---files
+¦   ¦   ¦   +---generator
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   ¦       +---generators
+¦   ¦   ¦   ¦       +---node
+¦   ¦   ¦   +---helper-compilation-targets
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   +---helper-module-imports
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   +---helper-module-transforms
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   +---helper-plugin-utils
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   +---helper-string-parser
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   +---helper-validator-identifier
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   +---helper-validator-option
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   +---helpers
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   ¦       +---helpers
+¦   ¦   ¦   +---parser
+¦   ¦   ¦   ¦   +---bin
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   ¦   +---typings
+¦   ¦   ¦   +---plugin-transform-react-jsx-self
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   +---plugin-transform-react-jsx-source
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   +---template
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   +---traverse
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   ¦       +---path
+¦   ¦   ¦   ¦       ¦   +---inference
+¦   ¦   ¦   ¦       ¦   +---lib
+¦   ¦   ¦   ¦       +---scope
+¦   ¦   ¦   ¦           +---lib
+¦   ¦   ¦   +---types
+¦   ¦   ¦       +---lib
+¦   ¦   ¦           +---asserts
+¦   ¦   ¦           ¦   +---generated
+¦   ¦   ¦           +---ast-types
+¦   ¦   ¦           ¦   +---generated
+¦   ¦   ¦           +---builders
+¦   ¦   ¦           ¦   +---flow
+¦   ¦   ¦           ¦   +---generated
+¦   ¦   ¦           ¦   +---react
+¦   ¦   ¦           ¦   +---typescript
+¦   ¦   ¦           +---clone
+¦   ¦   ¦           +---comments
+¦   ¦   ¦           +---constants
+¦   ¦   ¦           ¦   +---generated
+¦   ¦   ¦           +---converters
+¦   ¦   ¦           +---definitions
+¦   ¦   ¦           +---modifications
+¦   ¦   ¦           ¦   +---flow
+¦   ¦   ¦           ¦   +---typescript
+¦   ¦   ¦           +---retrievers
+¦   ¦   ¦           +---traverse
+¦   ¦   ¦           +---utils
+¦   ¦   ¦           ¦   +---react
+¦   ¦   ¦           +---validators
+¦   ¦   ¦               +---generated
+¦   ¦   ¦               +---react
+¦   ¦   +---@cloudinary
+¦   ¦   ¦   +---transformation-builder-sdk
+¦   ¦   ¦   ¦   +---actions
+¦   ¦   ¦   ¦   ¦   +---adjust
+¦   ¦   ¦   ¦   ¦   ¦   +---simple
+¦   ¦   ¦   ¦   ¦   +---background
+¦   ¦   ¦   ¦   ¦   ¦   +---actions
+¦   ¦   ¦   ¦   ¦   +---customFunction
+¦   ¦   ¦   ¦   ¦   +---delivery
+¦   ¦   ¦   ¦   ¦   +---effect
+¦   ¦   ¦   ¦   ¦   ¦   +---EffectActions
+¦   ¦   ¦   ¦   ¦   ¦   +---leveled
+¦   ¦   ¦   ¦   ¦   ¦   +---pixelate
+¦   ¦   ¦   ¦   ¦   +---layer
+¦   ¦   ¦   ¦   ¦   +---namedTransformation
+¦   ¦   ¦   ¦   ¦   +---psdTools
+¦   ¦   ¦   ¦   ¦   +---reshape
+¦   ¦   ¦   ¦   ¦   +---resize
+¦   ¦   ¦   ¦   ¦   +---rotate
+¦   ¦   ¦   ¦   ¦   +---roundCorners
+¦   ¦   ¦   ¦   ¦   +---transcode
+¦   ¦   ¦   ¦   ¦   +---variable
+¦   ¦   ¦   ¦   ¦   +---videoEdit
+¦   ¦   ¦   ¦   +---backwards
+¦   ¦   ¦   ¦   ¦   +---legacyLayer
+¦   ¦   ¦   ¦   ¦   +---transformationProcessing
+¦   ¦   ¦   ¦   ¦   +---utils
+¦   ¦   ¦   ¦   +---bundles
+¦   ¦   ¦   ¦   ¦   +---umd
+¦   ¦   ¦   ¦   +---internal
+¦   ¦   ¦   ¦   ¦   +---models
+¦   ¦   ¦   ¦   ¦   +---qualifier
+¦   ¦   ¦   ¦   ¦   +---utils
+¦   ¦   ¦   ¦   +---qualifiers
+¦   ¦   ¦   ¦   ¦   +---animatedFormat
+¦   ¦   ¦   ¦   ¦   +---aspectRatio
+¦   ¦   ¦   ¦   ¦   +---background
+¦   ¦   ¦   ¦   ¦   ¦   +---shared
+¦   ¦   ¦   ¦   ¦   ¦       +---auto
+¦   ¦   ¦   ¦   ¦   ¦       +---base
+¦   ¦   ¦   ¦   ¦   ¦       +---gradient
+¦   ¦   ¦   ¦   ¦   +---blendMode
+¦   ¦   ¦   ¦   ¦   +---expression
+¦   ¦   ¦   ¦   ¦   +---flag
+¦   ¦   ¦   ¦   ¦   +---format
+¦   ¦   ¦   ¦   ¦   +---gradientDirection
+¦   ¦   ¦   ¦   ¦   +---gravity
+¦   ¦   ¦   ¦   ¦   ¦   +---autoGravity
+¦   ¦   ¦   ¦   ¦   ¦   +---compassGravity
+¦   ¦   ¦   ¦   ¦   ¦   +---focusOnGravity
+¦   ¦   ¦   ¦   ¦   ¦   +---qualifiers
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---compass
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---focusOn
+¦   ¦   ¦   ¦   ¦   ¦   +---xyCenterGravity
+¦   ¦   ¦   ¦   ¦   +---position
+¦   ¦   ¦   ¦   ¦   +---region
+¦   ¦   ¦   ¦   ¦   +---rotate
+¦   ¦   ¦   ¦   ¦   +---source
+¦   ¦   ¦   ¦   ¦   ¦   +---sourceTypes
+¦   ¦   ¦   ¦   ¦   +---video
+¦   ¦   ¦   ¦   ¦   +---videoCodecType
+¦   ¦   ¦   ¦   +---transformation
+¦   ¦   ¦   ¦   +---types
+¦   ¦   ¦   +---url-gen
+¦   ¦   ¦       +---actions
+¦   ¦   ¦       ¦   +---adjust
+¦   ¦   ¦       ¦   ¦   +---simple
+¦   ¦   ¦       ¦   +---background
+¦   ¦   ¦       ¦   ¦   +---actions
+¦   ¦   ¦       ¦   +---customFunction
+¦   ¦   ¦       ¦   +---delivery
+¦   ¦   ¦       ¦   +---effect
+¦   ¦   ¦       ¦   ¦   +---blur
+¦   ¦   ¦       ¦   ¦   +---EffectActions
+¦   ¦   ¦       ¦   ¦   +---leveled
+¦   ¦   ¦       ¦   ¦   +---pixelate
+¦   ¦   ¦       ¦   +---layer
+¦   ¦   ¦       ¦   +---namedTransformation
+¦   ¦   ¦       ¦   +---psdTools
+¦   ¦   ¦       ¦   +---reshape
+¦   ¦   ¦       ¦   +---resize
+¦   ¦   ¦       ¦   +---rotate
+¦   ¦   ¦       ¦   +---roundCorners
+¦   ¦   ¦       ¦   +---transcode
+¦   ¦   ¦       ¦   +---variable
+¦   ¦   ¦       ¦   +---videoEdit
+¦   ¦   ¦       +---assets
+¦   ¦   ¦       +---backwards
+¦   ¦   ¦       ¦   +---legacyLayer
+¦   ¦   ¦       ¦   +---transformationProcessing
+¦   ¦   ¦       ¦   +---utils
+¦   ¦   ¦       +---bundles
+¦   ¦   ¦       ¦   +---umd
+¦   ¦   ¦       +---config
+¦   ¦   ¦       ¦   +---interfaces
+¦   ¦   ¦       ¦       +---Config
+¦   ¦   ¦       +---instance
+¦   ¦   ¦       +---internal
+¦   ¦   ¦       ¦   +---qualifier
+¦   ¦   ¦       ¦   +---url
+¦   ¦   ¦       ¦   ¦   +---urlUtils
+¦   ¦   ¦       ¦   +---utils
+¦   ¦   ¦       +---qualifiers
+¦   ¦   ¦       ¦   +---animatedFormat
+¦   ¦   ¦       ¦   +---aspectRatio
+¦   ¦   ¦       ¦   +---background
+¦   ¦   ¦       ¦   ¦   +---shared
+¦   ¦   ¦       ¦   ¦       +---auto
+¦   ¦   ¦       ¦   ¦       +---base
+¦   ¦   ¦       ¦   ¦       +---gradient
+¦   ¦   ¦       ¦   +---blendMode
+¦   ¦   ¦       ¦   +---expression
+¦   ¦   ¦       ¦   +---flag
+¦   ¦   ¦       ¦   +---format
+¦   ¦   ¦       ¦   +---gradientDirection
+¦   ¦   ¦       ¦   +---gravity
+¦   ¦   ¦       ¦   ¦   +---autoGravity
+¦   ¦   ¦       ¦   ¦   +---compassGravity
+¦   ¦   ¦       ¦   ¦   +---focusOnGravity
+¦   ¦   ¦       ¦   ¦   +---qualifiers
+¦   ¦   ¦       ¦   ¦   ¦   +---compass
+¦   ¦   ¦       ¦   ¦   ¦   +---focusOn
+¦   ¦   ¦       ¦   ¦   +---xyCenterGravity
+¦   ¦   ¦       ¦   +---position
+¦   ¦   ¦       ¦   +---region
+¦   ¦   ¦       ¦   +---rotate
+¦   ¦   ¦       ¦   +---source
+¦   ¦   ¦       ¦   ¦   +---sourceTypes
+¦   ¦   ¦       ¦   +---video
+¦   ¦   ¦       ¦   +---videoCodecType
+¦   ¦   ¦       +---sdkAnalytics
+¦   ¦   ¦       ¦   +---interfaces
+¦   ¦   ¦       +---transformation
+¦   ¦   ¦       +---types
+¦   ¦   +---@esbuild
+¦   ¦   ¦   +---win32-x64
+¦   ¦   +---@jridgewell
+¦   ¦   ¦   +---gen-mapping
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦       +---types
+¦   ¦   ¦   +---resolve-uri
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦       +---types
+¦   ¦   ¦   +---set-array
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦       +---types
+¦   ¦   ¦   +---sourcemap-codec
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦       +---types
+¦   ¦   ¦   +---trace-mapping
+¦   ¦   ¦       +---dist
+¦   ¦   ¦           +---types
+¦   ¦   +---@rollup
+¦   ¦   ¦   +---rollup-win32-x64-msvc
+¦   ¦   +---@types
+¦   ¦   ¦   +---babel__core
+¦   ¦   ¦   +---babel__generator
+¦   ¦   ¦   +---babel__template
+¦   ¦   ¦   +---babel__traverse
+¦   ¦   ¦   +---estree
+¦   ¦   ¦   +---prop-types
+¦   ¦   ¦   +---react
+¦   ¦   ¦   ¦   +---ts5.0
+¦   ¦   ¦   +---react-dom
+¦   ¦   ¦       +---test-utils
+¦   ¦   +---@vitejs
+¦   ¦   ¦   +---plugin-react
+¦   ¦   ¦       +---dist
+¦   ¦   +---browserslist
+¦   ¦   +---caniuse-lite
+¦   ¦   ¦   +---data
+¦   ¦   ¦   ¦   +---features
+¦   ¦   ¦   ¦   +---regions
+¦   ¦   ¦   +---dist
+¦   ¦   ¦       +---lib
+¦   ¦   ¦       +---unpacker
+¦   ¦   +---convert-source-map
+¦   ¦   +---csstype
+¦   ¦   +---d3-array
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   +---src
+¦   ¦   ¦       +---threshold
+¦   ¦   +---d3-color
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   +---src
+¦   ¦   +---d3-dispatch
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   +---src
+¦   ¦   +---d3-drag
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   +---src
+¦   ¦   +---d3-ease
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   +---src
+¦   ¦   +---d3-geo
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   +---src
+¦   ¦   ¦       +---clip
+¦   ¦   ¦       +---path
+¦   ¦   ¦       +---projection
+¦   ¦   +---d3-interpolate
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   +---src
+¦   ¦   ¦       +---transform
+¦   ¦   +---d3-selection
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   +---src
+¦   ¦   ¦       +---selection
+¦   ¦   +---d3-timer
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   +---src
+¦   ¦   +---d3-transition
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   +---src
+¦   ¦   ¦       +---selection
+¦   ¦   ¦       +---transition
+¦   ¦   +---d3-zoom
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   +---src
+¦   ¦   +---debug
+¦   ¦   ¦   +---src
+¦   ¦   +---electron-to-chromium
+¦   ¦   +---esbuild
+¦   ¦   ¦   +---bin
+¦   ¦   ¦   +---lib
+¦   ¦   +---escalade
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   +---sync
+¦   ¦   +---gensync
+¦   ¦   ¦   +---test
+¦   ¦   +---globals
+¦   ¦   +---internmap
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   +---src
+¦   ¦   +---js-tokens
+¦   ¦   +---jsesc
+¦   ¦   ¦   +---bin
+¦   ¦   ¦   +---man
+¦   ¦   +---json5
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   +---lib
+¦   ¦   +---jwt-decode
+¦   ¦   ¦   +---build
+¦   ¦   ¦       +---cjs
+¦   ¦   ¦       +---esm
+¦   ¦   +---lodash
+¦   ¦   ¦   +---fp
+¦   ¦   +---loose-envify
+¦   ¦   +---lru-cache
+¦   ¦   +---ms
+¦   ¦   +---nanoid
+¦   ¦   ¦   +---async
+¦   ¦   ¦   +---bin
+¦   ¦   ¦   +---non-secure
+¦   ¦   ¦   +---url-alphabet
+¦   ¦   +---node-releases
+¦   ¦   ¦   +---data
+¦   ¦   ¦       +---processed
+¦   ¦   ¦       +---release-schedule
+¦   ¦   +---picocolors
+¦   ¦   +---postcss
+¦   ¦   ¦   +---lib
+¦   ¦   +---react
+¦   ¦   ¦   +---cjs
+¦   ¦   ¦   +---umd
+¦   ¦   +---react-dom
+¦   ¦   ¦   +---cjs
+¦   ¦   ¦   +---umd
+¦   ¦   +---react-refresh
+¦   ¦   ¦   +---cjs
+¦   ¦   +---rollup
+¦   ¦   ¦   +---dist
+¦   ¦   ¦       +---bin
+¦   ¦   ¦       +---es
+¦   ¦   ¦       ¦   +---shared
+¦   ¦   ¦       +---shared
+¦   ¦   +---scheduler
+¦   ¦   ¦   +---cjs
+¦   ¦   ¦   +---umd
+¦   ¦   +---semver
+¦   ¦   ¦   +---bin
+¦   ¦   +---source-map-js
+¦   ¦   ¦   +---lib
+¦   ¦   +---update-browserslist-db
+¦   ¦   +---vite
+¦   ¦   ¦   +---bin
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦   +---client
+¦   ¦   ¦   ¦   +---node
+¦   ¦   ¦   ¦   ¦   +---chunks
+¦   ¦   ¦   ¦   +---node-cjs
+¦   ¦   ¦   +---types
+¦   ¦   +---yallist
+¦   +---public
+¦   ¦   +---data
+¦   ¦       +---countries
+¦   ¦           +---ABW
+¦   ¦           ¦   +---images
+¦   ¦           +---AFG
+¦   ¦           ¦   +---images
+¦   ¦           +---AGO
+¦   ¦           ¦   +---images
+¦   ¦           +---AIA
+¦   ¦           ¦   +---images
+¦   ¦           +---ALA
+¦   ¦           ¦   +---images
+¦   ¦           +---ALB
+¦   ¦           ¦   +---images
+¦   ¦           +---AND
+¦   ¦           ¦   +---images
+¦   ¦           +---ARE
+¦   ¦           ¦   +---images
+¦   ¦           +---ARG
+¦   ¦           ¦   +---images
+¦   ¦           +---ARM
+¦   ¦           ¦   +---images
+¦   ¦           +---ASM
+¦   ¦           ¦   +---images
+¦   ¦           +---ATA
+¦   ¦           ¦   +---images
+¦   ¦           +---ATF
+¦   ¦           ¦   +---images
+¦   ¦           +---ATG
+¦   ¦           ¦   +---images
+¦   ¦           +---AUS
+¦   ¦           ¦   +---images
+¦   ¦           +---AUT
+¦   ¦           ¦   +---images
+¦   ¦           +---AZE
+¦   ¦           ¦   +---images
+¦   ¦           +---BDI
+¦   ¦           ¦   +---images
+¦   ¦           +---BEL
+¦   ¦           ¦   +---images
+¦   ¦           +---BEN
+¦   ¦           ¦   +---images
+¦   ¦           +---BFA
+¦   ¦           ¦   +---images
+¦   ¦           +---BGD
+¦   ¦           ¦   +---images
+¦   ¦           +---BGR
+¦   ¦           ¦   +---images
+¦   ¦           +---BHR
+¦   ¦           ¦   +---images
+¦   ¦           +---BHS
+¦   ¦           ¦   +---images
+¦   ¦           +---BIH
+¦   ¦           ¦   +---images
+¦   ¦           +---BLM
+¦   ¦           ¦   +---images
+¦   ¦           +---BLR
+¦   ¦           ¦   +---images
+¦   ¦           +---BLZ
+¦   ¦           ¦   +---images
+¦   ¦           +---BMU
+¦   ¦           ¦   +---images
+¦   ¦           +---BOL
+¦   ¦           ¦   +---images
+¦   ¦           +---BRA
+¦   ¦           ¦   +---images
+¦   ¦           +---BRB
+¦   ¦           ¦   +---images
+¦   ¦           +---BRN
+¦   ¦           ¦   +---images
+¦   ¦           +---BTN
+¦   ¦           ¦   +---images
+¦   ¦           +---BWA
+¦   ¦           ¦   +---images
+¦   ¦           +---CAF
+¦   ¦           ¦   +---images
+¦   ¦           +---CAN
+¦   ¦           ¦   +---images
+¦   ¦           +---CHE
+¦   ¦           ¦   +---images
+¦   ¦           +---CHL
+¦   ¦           ¦   +---images
+¦   ¦           +---CHN
+¦   ¦           ¦   +---images
+¦   ¦           +---CIV
+¦   ¦           ¦   +---images
+¦   ¦           +---CMR
+¦   ¦           ¦   +---images
+¦   ¦           +---COD
+¦   ¦           ¦   +---images
+¦   ¦           +---COG
+¦   ¦           ¦   +---images
+¦   ¦           +---COK
+¦   ¦           ¦   +---images
+¦   ¦           +---COL
+¦   ¦           ¦   +---images
+¦   ¦           +---COM
+¦   ¦           ¦   +---images
+¦   ¦           +---CPV
+¦   ¦           ¦   +---images
+¦   ¦           +---CRI
+¦   ¦           ¦   +---images
+¦   ¦           +---CUB
+¦   ¦           ¦   +---images
+¦   ¦           +---CUW
+¦   ¦           ¦   +---images
+¦   ¦           +---CYM
+¦   ¦           ¦   +---images
+¦   ¦           +---CYP
+¦   ¦           ¦   +---images
+¦   ¦           +---CZE
+¦   ¦           ¦   +---images
+¦   ¦           +---DEU
+¦   ¦           ¦   +---images
+¦   ¦           +---DJI
+¦   ¦           ¦   +---images
+¦   ¦           +---DMA
+¦   ¦           ¦   +---images
+¦   ¦           +---DNK
+¦   ¦           ¦   +---images
+¦   ¦           +---DOM
+¦   ¦           ¦   +---images
+¦   ¦           +---DZA
+¦   ¦           ¦   +---images
+¦   ¦           +---ECU
+¦   ¦           ¦   +---images
+¦   ¦           +---EGY
+¦   ¦           ¦   +---images
+¦   ¦           +---ERI
+¦   ¦           ¦   +---images
+¦   ¦           +---ESH
+¦   ¦           ¦   +---images
+¦   ¦           +---ESP
+¦   ¦           ¦   +---images
+¦   ¦           +---EST
+¦   ¦           ¦   +---images
+¦   ¦           +---ETH
+¦   ¦           ¦   +---images
+¦   ¦           +---FIN
+¦   ¦           ¦   +---images
+¦   ¦           +---FJI
+¦   ¦           ¦   +---images
+¦   ¦           +---FLK
+¦   ¦           ¦   +---images
+¦   ¦           +---FRA
+¦   ¦           ¦   +---images
+¦   ¦           +---FRO
+¦   ¦           ¦   +---images
+¦   ¦           +---FSM
+¦   ¦           ¦   +---images
+¦   ¦           +---GAB
+¦   ¦           ¦   +---images
+¦   ¦           +---GBR
+¦   ¦           ¦   +---images
+¦   ¦           +---GEO
+¦   ¦           ¦   +---images
+¦   ¦           +---GGY
+¦   ¦           ¦   +---images
+¦   ¦           +---GHA
+¦   ¦           ¦   +---images
+¦   ¦           +---GIN
+¦   ¦           ¦   +---images
+¦   ¦           +---GMB
+¦   ¦           ¦   +---images
+¦   ¦           +---GNB
+¦   ¦           ¦   +---images
+¦   ¦           +---GNQ
+¦   ¦           ¦   +---images
+¦   ¦           +---GRC
+¦   ¦           ¦   +---images
+¦   ¦           +---GRD
+¦   ¦           ¦   +---images
+¦   ¦           +---GRL
+¦   ¦           ¦   +---images
+¦   ¦           +---GTM
+¦   ¦           ¦   +---images
+¦   ¦           +---GUM
+¦   ¦           ¦   +---images
+¦   ¦           +---GUY
+¦   ¦           ¦   +---images
+¦   ¦           +---HKG
+¦   ¦           ¦   +---images
+¦   ¦           +---HMD
+¦   ¦           ¦   +---images
+¦   ¦           +---HND
+¦   ¦           ¦   +---images
+¦   ¦           +---HRV
+¦   ¦           ¦   +---images
+¦   ¦           +---HTI
+¦   ¦           ¦   +---images
+¦   ¦           +---HUN
+¦   ¦           ¦   +---images
+¦   ¦           +---IDN
+¦   ¦           ¦   +---images
+¦   ¦           +---IMN
+¦   ¦           ¦   +---images
+¦   ¦           +---IND
+¦   ¦           ¦   +---images
+¦   ¦           +---IOT
+¦   ¦           ¦   +---images
+¦   ¦           +---IRL
+¦   ¦           ¦   +---images
+¦   ¦           +---IRN
+¦   ¦           ¦   +---images
+¦   ¦           +---IRQ
+¦   ¦           ¦   +---images
+¦   ¦           +---ISL
+¦   ¦           ¦   +---images
+¦   ¦           +---ISR
+¦   ¦           ¦   +---images
+¦   ¦           +---ITA
+¦   ¦           ¦   +---images
+¦   ¦           +---JAM
+¦   ¦           ¦   +---images
+¦   ¦           +---JEY
+¦   ¦           ¦   +---images
+¦   ¦           +---JOR
+¦   ¦           ¦   +---images
+¦   ¦           +---JPN
+¦   ¦           ¦   +---images
+¦   ¦           +---KAZ
+¦   ¦           ¦   +---images
+¦   ¦           +---KEN
+¦   ¦           ¦   +---images
+¦   ¦           +---KGZ
+¦   ¦           ¦   +---images
+¦   ¦           +---KHM
+¦   ¦           ¦   +---images
+¦   ¦           +---KIR
+¦   ¦           ¦   +---images
+¦   ¦           +---KNA
+¦   ¦           ¦   +---images
+¦   ¦           +---KOR
+¦   ¦           ¦   +---images
+¦   ¦           +---KWT
+¦   ¦           ¦   +---images
+¦   ¦           +---LAO
+¦   ¦           ¦   +---images
+¦   ¦           +---LBN
+¦   ¦           ¦   +---images
+¦   ¦           +---LBR
+¦   ¦           ¦   +---images
+¦   ¦           +---LBY
+¦   ¦           ¦   +---images
+¦   ¦           +---LCA
+¦   ¦           ¦   +---images
+¦   ¦           +---LIE
+¦   ¦           ¦   +---images
+¦   ¦           +---LKA
+¦   ¦           ¦   +---images
+¦   ¦           +---LSO
+¦   ¦           ¦   +---images
+¦   ¦           +---LTU
+¦   ¦           ¦   +---images
+¦   ¦           +---LUX
+¦   ¦           ¦   +---images
+¦   ¦           +---LVA
+¦   ¦           ¦   +---images
+¦   ¦           +---MAC
+¦   ¦           ¦   +---images
+¦   ¦           +---MAF
+¦   ¦           ¦   +---images
+¦   ¦           +---MAR
+¦   ¦           ¦   +---images
+¦   ¦           +---MCO
+¦   ¦           ¦   +---images
+¦   ¦           +---MDA
+¦   ¦           ¦   +---images
+¦   ¦           +---MDG
+¦   ¦           ¦   +---images
+¦   ¦           +---MDV
+¦   ¦           ¦   +---images
+¦   ¦           +---MEX
+¦   ¦           ¦   +---images
+¦   ¦           +---MHL
+¦   ¦           ¦   +---images
+¦   ¦           +---MKD
+¦   ¦           ¦   +---images
+¦   ¦           +---MLI
+¦   ¦           ¦   +---images
+¦   ¦           +---MLT
+¦   ¦           ¦   +---images
+¦   ¦           +---MMR
+¦   ¦           ¦   +---images
+¦   ¦           +---MNE
+¦   ¦           ¦   +---images
+¦   ¦           +---MNG
+¦   ¦           ¦   +---images
+¦   ¦           +---MNP
+¦   ¦           ¦   +---images
+¦   ¦           +---MOZ
+¦   ¦           ¦   +---images
+¦   ¦           +---MRT
+¦   ¦           ¦   +---images
+¦   ¦           +---MSR
+¦   ¦           ¦   +---images
+¦   ¦           +---MUS
+¦   ¦           ¦   +---images
+¦   ¦           +---MWI
+¦   ¦           ¦   +---images
+¦   ¦           +---MYS
+¦   ¦           ¦   +---images
+¦   ¦           +---NAM
+¦   ¦           ¦   +---images
+¦   ¦           +---NCL
+¦   ¦           ¦   +---images
+¦   ¦           +---NER
+¦   ¦           ¦   +---images
+¦   ¦           +---NFK
+¦   ¦           ¦   +---images
+¦   ¦           +---NGA
+¦   ¦           ¦   +---images
+¦   ¦           +---NIC
+¦   ¦           ¦   +---images
+¦   ¦           +---NIU
+¦   ¦           ¦   +---images
+¦   ¦           +---NLD
+¦   ¦           ¦   +---images
+¦   ¦           +---NPL
+¦   ¦           ¦   +---images
+¦   ¦           +---NRU
+¦   ¦           ¦   +---images
+¦   ¦           +---NZL
+¦   ¦           ¦   +---images
+¦   ¦           +---OMN
+¦   ¦           ¦   +---images
+¦   ¦           +---PAK
+¦   ¦           ¦   +---images
+¦   ¦           +---PAN
+¦   ¦           ¦   +---images
+¦   ¦           +---PCN
+¦   ¦           ¦   +---images
+¦   ¦           +---PER
+¦   ¦           ¦   +---images
+¦   ¦           +---PHL
+¦   ¦           ¦   +---images
+¦   ¦           +---PLW
+¦   ¦           ¦   +---images
+¦   ¦           +---PNG
+¦   ¦           ¦   +---images
+¦   ¦           +---POL
+¦   ¦           ¦   +---images
+¦   ¦           +---PRI
+¦   ¦           ¦   +---images
+¦   ¦           +---PRK
+¦   ¦           ¦   +---images
+¦   ¦           +---PRT
+¦   ¦           ¦   +---images
+¦   ¦           +---PRY
+¦   ¦           ¦   +---images
+¦   ¦           +---PSE
+¦   ¦           ¦   +---images
+¦   ¦           +---PYF
+¦   ¦           ¦   +---images
+¦   ¦           +---QAT
+¦   ¦           ¦   +---images
+¦   ¦           +---ROU
+¦   ¦           ¦   +---images
+¦   ¦           +---RUS
+¦   ¦           ¦   +---images
+¦   ¦           +---RWA
+¦   ¦           ¦   +---images
+¦   ¦           +---SAU
+¦   ¦           ¦   +---images
+¦   ¦           +---SDN
+¦   ¦           ¦   +---images
+¦   ¦           +---SEN
+¦   ¦           ¦   +---images
+¦   ¦           +---SGP
+¦   ¦           ¦   +---images
+¦   ¦           +---SGS
+¦   ¦           ¦   +---images
+¦   ¦           +---SHN
+¦   ¦           ¦   +---images
+¦   ¦           +---SLB
+¦   ¦           ¦   +---images
+¦   ¦           +---SLE
+¦   ¦           ¦   +---images
+¦   ¦           +---SLV
+¦   ¦           ¦   +---images
+¦   ¦           +---SMR
+¦   ¦           ¦   +---images
+¦   ¦           +---SOM
+¦   ¦           ¦   +---images
+¦   ¦           +---SPM
+¦   ¦           ¦   +---images
+¦   ¦           +---SRB
+¦   ¦           ¦   +---images
+¦   ¦           +---SSD
+¦   ¦           ¦   +---images
+¦   ¦           +---STP
+¦   ¦           ¦   +---images
+¦   ¦           +---SUR
+¦   ¦           ¦   +---images
+¦   ¦           +---SVK
+¦   ¦           ¦   +---images
+¦   ¦           +---SVN
+¦   ¦           ¦   +---images
+¦   ¦           +---SWE
+¦   ¦           ¦   +---images
+¦   ¦           +---SWZ
+¦   ¦           ¦   +---images
+¦   ¦           +---SXM
+¦   ¦           ¦   +---images
+¦   ¦           +---SYC
+¦   ¦           ¦   +---images
+¦   ¦           +---SYR
+¦   ¦           ¦   +---images
+¦   ¦           +---TCA
+¦   ¦           ¦   +---images
+¦   ¦           +---TCD
+¦   ¦           ¦   +---images
+¦   ¦           +---TGO
+¦   ¦           ¦   +---images
+¦   ¦           +---THA
+¦   ¦           ¦   +---images
+¦   ¦           +---TJK
+¦   ¦           ¦   +---images
+¦   ¦           +---TKM
+¦   ¦           ¦   +---images
+¦   ¦           +---TLS
+¦   ¦           ¦   +---images
+¦   ¦           +---TON
+¦   ¦           ¦   +---images
+¦   ¦           +---TTO
+¦   ¦           ¦   +---images
+¦   ¦           +---TUN
+¦   ¦           ¦   +---images
+¦   ¦           +---TUR
+¦   ¦           ¦   +---images
+¦   ¦           +---TUV
+¦   ¦           ¦   +---images
+¦   ¦           +---TWN
+¦   ¦           ¦   +---images
+¦   ¦           +---TZA
+¦   ¦           ¦   +---images
+¦   ¦           +---UGA
+¦   ¦           ¦   +---images
+¦   ¦           +---UKR
+¦   ¦           ¦   +---images
+¦   ¦           +---URY
+¦   ¦           ¦   +---images
+¦   ¦           +---USA
+¦   ¦           ¦   +---images
+¦   ¦           +---UZB
+¦   ¦           ¦   +---images
+¦   ¦           +---VAT
+¦   ¦           ¦   +---images
+¦   ¦           +---VCT
+¦   ¦           ¦   +---images
+¦   ¦           +---VEN
+¦   ¦           ¦   +---images
+¦   ¦           +---VGB
+¦   ¦           ¦   +---images
+¦   ¦           +---VIR
+¦   ¦           ¦   +---images
+¦   ¦           +---VNM
+¦   ¦           ¦   +---images
+¦   ¦           +---VUT
+¦   ¦           ¦   +---images
+¦   ¦           +---WLF
+¦   ¦           ¦   +---images
+¦   ¦           +---WSM
+¦   ¦           ¦   +---images
+¦   ¦           +---YEM
+¦   ¦           ¦   +---images
+¦   ¦           +---ZAF
+¦   ¦           ¦   +---images
+¦   ¦           +---ZMB
+¦   ¦           ¦   +---images
+¦   ¦           +---ZWE
+¦   ¦               +---images
+¦   +---scripts
+¦   +---src
+¦       +---assets
+¦       +---components
+¦       +---config
+¦       +---data
+¦       +---hooks
+¦       +---styles
+¦       +---utils
+¦       +---workers
++---node_modules
+¦   +---.bin
+¦   +---.vite
+¦   ¦   +---deps
+¦   ¦   +---deps_temp_03fceecb
+¦   ¦   +---deps_temp_338dd566
+¦   ¦   +---deps_temp_6172f048
+¦   ¦   +---deps_temp_99bbff88
+¦   +---@ampproject
+¦   ¦   +---remapping
+¦   ¦       +---dist
+¦   ¦           +---types
+¦   +---@babel
+¦   ¦   +---code-frame
+¦   ¦   ¦   +---lib
+¦   ¦   +---compat-data
+¦   ¦   ¦   +---data
+¦   ¦   +---core
+¦   ¦   ¦   +---lib
+¦   ¦   ¦   ¦   +---config
+¦   ¦   ¦   ¦   ¦   +---files
+¦   ¦   ¦   ¦   ¦   +---helpers
+¦   ¦   ¦   ¦   ¦   +---validation
+¦   ¦   ¦   ¦   +---errors
+¦   ¦   ¦   ¦   +---gensync-utils
+¦   ¦   ¦   ¦   +---parser
+¦   ¦   ¦   ¦   ¦   +---util
+¦   ¦   ¦   ¦   +---tools
+¦   ¦   ¦   ¦   +---transformation
+¦   ¦   ¦   ¦   ¦   +---file
+¦   ¦   ¦   ¦   ¦   +---util
+¦   ¦   ¦   ¦   +---vendor
+¦   ¦   ¦   +---src
+¦   ¦   ¦       +---config
+¦   ¦   ¦           +---files
+¦   ¦   +---generator
+¦   ¦   ¦   +---lib
+¦   ¦   ¦       +---generators
+¦   ¦   ¦       +---node
+¦   ¦   +---helper-compilation-targets
+¦   ¦   ¦   +---lib
+¦   ¦   +---helper-module-imports
+¦   ¦   ¦   +---lib
+¦   ¦   +---helper-module-transforms
+¦   ¦   ¦   +---lib
+¦   ¦   +---helper-plugin-utils
+¦   ¦   ¦   +---lib
+¦   ¦   +---helper-string-parser
+¦   ¦   ¦   +---lib
+¦   ¦   +---helper-validator-identifier
+¦   ¦   ¦   +---lib
+¦   ¦   +---helper-validator-option
+¦   ¦   ¦   +---lib
+¦   ¦   +---helpers
+¦   ¦   ¦   +---lib
+¦   ¦   ¦       +---helpers
+¦   ¦   +---parser
+¦   ¦   ¦   +---bin
+¦   ¦   ¦   +---lib
+¦   ¦   ¦   +---typings
+¦   ¦   +---plugin-transform-react-jsx-self
+¦   ¦   ¦   +---lib
+¦   ¦   +---plugin-transform-react-jsx-source
+¦   ¦   ¦   +---lib
+¦   ¦   +---template
+¦   ¦   ¦   +---lib
+¦   ¦   +---traverse
+¦   ¦   ¦   +---lib
+¦   ¦   ¦       +---path
+¦   ¦   ¦       ¦   +---inference
+¦   ¦   ¦       ¦   +---lib
+¦   ¦   ¦       +---scope
+¦   ¦   ¦           +---lib
+¦   ¦   +---types
+¦   ¦       +---lib
+¦   ¦           +---asserts
+¦   ¦           ¦   +---generated
+¦   ¦           +---ast-types
+¦   ¦           ¦   +---generated
+¦   ¦           +---builders
+¦   ¦           ¦   +---flow
+¦   ¦           ¦   +---generated
+¦   ¦           ¦   +---react
+¦   ¦           ¦   +---typescript
+¦   ¦           +---clone
+¦   ¦           +---comments
+¦   ¦           +---constants
+¦   ¦           ¦   +---generated
+¦   ¦           +---converters
+¦   ¦           +---definitions
+¦   ¦           +---modifications
+¦   ¦           ¦   +---flow
+¦   ¦           ¦   +---typescript
+¦   ¦           +---retrievers
+¦   ¦           +---traverse
+¦   ¦           +---utils
+¦   ¦           ¦   +---react
+¦   ¦           +---validators
+¦   ¦               +---generated
+¦   ¦               +---react
+¦   +---@esbuild
+¦   ¦   +---win32-x64
+¦   +---@jridgewell
+¦   ¦   +---gen-mapping
+¦   ¦   ¦   +---dist
+¦   ¦   ¦       +---types
+¦   ¦   +---resolve-uri
+¦   ¦   ¦   +---dist
+¦   ¦   ¦       +---types
+¦   ¦   +---set-array
+¦   ¦   ¦   +---dist
+¦   ¦   ¦       +---types
+¦   ¦   +---sourcemap-codec
+¦   ¦   ¦   +---dist
+¦   ¦   ¦       +---types
+¦   ¦   +---trace-mapping
+¦   ¦       +---dist
+¦   ¦           +---types
+¦   +---@mongodb-js
+¦   +---@rollup
+¦   ¦   +---rollup-win32-x64-msvc
+¦   +---@types
+¦   ¦   +---babel__core
+¦   ¦   +---babel__generator
+¦   ¦   +---babel__template
+¦   ¦   +---babel__traverse
+¦   ¦   +---estree
+¦   +---@vitejs
+¦   ¦   +---plugin-react
+¦   ¦       +---dist
+¦   +---browserslist
+¦   +---caniuse-lite
+¦   ¦   +---data
+¦   ¦   ¦   +---features
+¦   ¦   ¦   +---regions
+¦   ¦   +---dist
+¦   ¦       +---lib
+¦   ¦       +---unpacker
+¦   +---convert-source-map
+¦   +---debug
+¦   ¦   +---src
+¦   +---electron-to-chromium
+¦   +---esbuild
+¦   ¦   +---bin
+¦   ¦   +---lib
+¦   +---escalade
+¦   ¦   +---dist
+¦   ¦   +---sync
+¦   +---gensync
+¦   ¦   +---test
+¦   +---globals
+¦   +---js-tokens
+¦   +---jsesc
+¦   ¦   +---bin
+¦   ¦   +---man
+¦   +---json5
+¦   ¦   +---dist
+¦   ¦   +---lib
+¦   +---lru-cache
+¦   +---ms
+¦   +---nanoid
+¦   ¦   +---async
+¦   ¦   +---bin
+¦   ¦   +---non-secure
+¦   ¦   +---url-alphabet
+¦   +---node-releases
+¦   ¦   +---data
+¦   ¦       +---processed
+¦   ¦       +---release-schedule
+¦   +---picocolors
+¦   +---postcss
+¦   ¦   +---lib
+¦   +---react-refresh
+¦   ¦   +---cjs
+¦   +---rollup
+¦   ¦   +---dist
+¦   ¦       +---bin
+¦   ¦       +---es
+¦   ¦       ¦   +---shared
+¦   ¦       +---shared
+¦   +---semver
+¦   ¦   +---bin
+¦   +---source-map-js
+¦   ¦   +---lib
+¦   +---update-browserslist-db
+¦   +---vite
+¦   ¦   +---bin
+¦   ¦   +---dist
+¦   ¦   ¦   +---client
+¦   ¦   ¦   +---node
+¦   ¦   ¦   ¦   +---chunks
+¦   ¦   ¦   +---node-cjs
+¦   ¦   +---misc
+¦   ¦   +---types
+¦   ¦       +---internal
+¦   +---yallist
++---server
+    +---api
+    ¦   +---auth
+    +---config
+    +---middleware
+    +---models
+    +---node_modules
+    ¦   +---.bin
+    ¦   +---@mongodb-js
+    ¦   ¦   +---saslprep
+    ¦   ¦       +---dist
+    ¦   +---@types
+    ¦   ¦   +---node
+    ¦   ¦   ¦   +---assert
+    ¦   ¦   ¦   +---compatibility
+    ¦   ¦   ¦   +---dns
+    ¦   ¦   ¦   +---fs
+    ¦   ¦   ¦   +---readline
+    ¦   ¦   ¦   +---stream
+    ¦   ¦   ¦   +---timers
+    ¦   ¦   ¦   +---ts5.6
+    ¦   ¦   +---webidl-conversions
+    ¦   ¦   +---whatwg-url
+    ¦   ¦       +---dist
+    ¦   +---accepts
+    ¦   +---anymatch
+    ¦   +---append-field
+    ¦   ¦   +---lib
+    ¦   ¦   +---test
+    ¦   +---array-flatten
+    ¦   +---balanced-match
+    ¦   ¦   +---.github
+    ¦   +---bcryptjs
+    ¦   ¦   +---.vscode
+    ¦   ¦   +---bin
+    ¦   ¦   +---dist
+    ¦   ¦   +---externs
+    ¦   ¦   +---scripts
+    ¦   ¦   +---src
+    ¦   ¦   ¦   +---bcrypt
+    ¦   ¦   ¦       +---prng
+    ¦   ¦   ¦       +---util
+    ¦   ¦   +---tests
+    ¦   +---binary-extensions
+    ¦   +---body-parser
+    ¦   ¦   +---lib
+    ¦   ¦       +---types
+    ¦   +---brace-expansion
+    ¦   +---braces
+    ¦   ¦   +---lib
+    ¦   +---bson
+    ¦   ¦   +---etc
+    ¦   ¦   +---lib
+    ¦   ¦   +---src
+    ¦   ¦   ¦   +---parser
+    ¦   ¦   ¦   +---utils
+    ¦   ¦   +---vendor
+    ¦   ¦       +---base64
+    ¦   ¦       +---text-encoding
+    ¦   ¦           +---lib
+    ¦   +---buffer-equal-constant-time
+    ¦   +---buffer-from
+    ¦   +---busboy
+    ¦   ¦   +---.github
+    ¦   ¦   ¦   +---workflows
+    ¦   ¦   +---bench
+    ¦   ¦   +---lib
+    ¦   ¦   ¦   +---types
+    ¦   ¦   +---test
+    ¦   +---bytes
+    ¦   +---call-bind-apply-helpers
+    ¦   ¦   +---.github
+    ¦   ¦   +---test
+    ¦   +---call-bound
+    ¦   ¦   +---.github
+    ¦   ¦   +---test
+    ¦   +---chokidar
+    ¦   ¦   +---lib
+    ¦   ¦   +---types
+    ¦   +---cloudinary
+    ¦   ¦   +---lib
+    ¦   ¦   ¦   +---analysis
+    ¦   ¦   ¦   +---api_client
+    ¦   ¦   ¦   +---cache
+    ¦   ¦   ¦   +---provisioning
+    ¦   ¦   ¦   +---utils
+    ¦   ¦   ¦   ¦   +---analytics
+    ¦   ¦   ¦   ¦   +---encoding
+    ¦   ¦   ¦   ¦   +---parsing
+    ¦   ¦   ¦   +---v2
+    ¦   ¦   +---types
+    ¦   +---concat-map
+    ¦   ¦   +---example
+    ¦   ¦   +---test
+    ¦   +---concat-stream
+    ¦   +---content-disposition
+    ¦   +---content-type
+    ¦   +---cookie
+    ¦   +---cookie-parser
+    ¦   +---cookie-signature
+    ¦   +---core-util-is
+    ¦   ¦   +---lib
+    ¦   +---cors
+    ¦   ¦   +---lib
+    ¦   +---cross-env
+    ¦   ¦   +---src
+    ¦   ¦       +---bin
+    ¦   +---cross-spawn
+    ¦   ¦   +---lib
+    ¦   ¦       +---util
+    ¦   +---debug
+    ¦   ¦   +---src
+    ¦   +---depd
+    ¦   ¦   +---lib
+    ¦   ¦       +---browser
+    ¦   +---destroy
+    ¦   +---dotenv
+    ¦   ¦   +---lib
+    ¦   +---dunder-proto
+    ¦   ¦   +---.github
+    ¦   ¦   +---test
+    ¦   +---ecdsa-sig-formatter
+    ¦   ¦   +---src
+    ¦   +---ee-first
+    ¦   +---encodeurl
+    ¦   +---es-define-property
+    ¦   ¦   +---.github
+    ¦   ¦   +---test
+    ¦   +---es-errors
+    ¦   ¦   +---.github
+    ¦   ¦   +---test
+    ¦   +---es-object-atoms
+    ¦   ¦   +---.github
+    ¦   ¦   +---test
+    ¦   +---escape-html
+    ¦   +---etag
+    ¦   +---express
+    ¦   ¦   +---lib
+    ¦   ¦   ¦   +---middleware
+    ¦   ¦   ¦   +---router
+    ¦   ¦   +---node_modules
+    ¦   ¦       +---cookie
+    ¦   +---express-rate-limit
+    ¦   ¦   +---dist
+    ¦   +---fill-range
+    ¦   +---finalhandler
+    ¦   +---forwarded
+    ¦   +---fresh
+    ¦   +---function-bind
+    ¦   ¦   +---.github
+    ¦   ¦   +---test
+    ¦   +---get-intrinsic
+    ¦   ¦   +---.github
+    ¦   ¦   +---test
+    ¦   +---glob-parent
+    ¦   +---gopd
+    ¦   ¦   +---.github
+    ¦   ¦   +---test
+    ¦   +---has-flag
+    ¦   +---has-symbols
+    ¦   ¦   +---.github
+    ¦   ¦   +---test
+    ¦   ¦       +---shams
+    ¦   +---hasown
+    ¦   ¦   +---.github
+    ¦   +---http-errors
+    ¦   +---iconv-lite
+    ¦   ¦   +---encodings
+    ¦   ¦   ¦   +---tables
+    ¦   ¦   +---lib
+    ¦   +---ignore-by-default
+    ¦   +---inherits
+    ¦   +---ip-address
+    ¦   ¦   +---dist
+    ¦   ¦   ¦   +---v4
+    ¦   ¦   ¦   +---v6
+    ¦   ¦   +---src
+    ¦   ¦       +---v4
+    ¦   ¦       +---v6
+    ¦   +---ipaddr.js
+    ¦   ¦   +---lib
+    ¦   +---is-binary-path
+    ¦   +---is-extglob
+    ¦   +---is-glob
+    ¦   +---is-number
+    ¦   +---isarray
+    ¦   +---isexe
+    ¦   ¦   +---test
+    ¦   +---jsbn
+    ¦   ¦   +---test
+    ¦   +---jsonwebtoken
+    ¦   ¦   +---lib
+    ¦   ¦   +---node_modules
+    ¦   ¦       +---ms
+    ¦   +---jwa
+    ¦   +---jws
+    ¦   ¦   +---lib
+    ¦   +---kareem
+    ¦   +---lodash
+    ¦   ¦   +---fp
+    ¦   +---lodash.includes
+    ¦   +---lodash.isboolean
+    ¦   +---lodash.isinteger
+    ¦   +---lodash.isnumber
+    ¦   +---lodash.isplainobject
+    ¦   +---lodash.isstring
+    ¦   +---lodash.once
+    ¦   +---math-intrinsics
+    ¦   ¦   +---.github
+    ¦   ¦   +---constants
+    ¦   ¦   +---test
+    ¦   +---media-typer
+    ¦   +---memory-pager
+    ¦   +---merge-descriptors
+    ¦   +---methods
+    ¦   +---mime
+    ¦   ¦   +---src
+    ¦   +---mime-db
+    ¦   +---mime-types
+    ¦   +---minimatch
+    ¦   +---minimist
+    ¦   ¦   +---.github
+    ¦   ¦   +---example
+    ¦   ¦   +---test
+    ¦   +---mkdirp
+    ¦   ¦   +---bin
+    ¦   +---mongodb
+    ¦   ¦   +---etc
+    ¦   ¦   +---lib
+    ¦   ¦   ¦   +---bulk
+    ¦   ¦   ¦   +---cmap
+    ¦   ¦   ¦   ¦   +---auth
+    ¦   ¦   ¦   ¦   ¦   +---mongodb_oidc
+    ¦   ¦   ¦   ¦   +---handshake
+    ¦   ¦   ¦   ¦   +---wire_protocol
+    ¦   ¦   ¦   +---cursor
+    ¦   ¦   ¦   +---gridfs
+    ¦   ¦   ¦   +---operations
+    ¦   ¦   ¦   ¦   +---search_indexes
+    ¦   ¦   ¦   +---sdam
+    ¦   ¦   +---src
+    ¦   ¦       +---bulk
+    ¦   ¦       +---cmap
+    ¦   ¦       ¦   +---auth
+    ¦   ¦       ¦   ¦   +---mongodb_oidc
+    ¦   ¦       ¦   +---handshake
+    ¦   ¦       ¦   +---wire_protocol
+    ¦   ¦       +---cursor
+    ¦   ¦       +---gridfs
+    ¦   ¦       +---operations
+    ¦   ¦       ¦   +---search_indexes
+    ¦   ¦       +---sdam
+    ¦   +---mongodb-connection-string-url
+    ¦   ¦   +---lib
+    ¦   +---mongoose
+    ¦   ¦   +---dist
+    ¦   ¦   +---lib
+    ¦   ¦   ¦   +---cast
+    ¦   ¦   ¦   +---cursor
+    ¦   ¦   ¦   +---drivers
+    ¦   ¦   ¦   ¦   +---browser
+    ¦   ¦   ¦   ¦   +---node-mongodb-native
+    ¦   ¦   ¦   +---error
+    ¦   ¦   ¦   +---helpers
+    ¦   ¦   ¦   ¦   +---aggregate
+    ¦   ¦   ¦   ¦   +---cursor
+    ¦   ¦   ¦   ¦   +---discriminator
+    ¦   ¦   ¦   ¦   +---document
+    ¦   ¦   ¦   ¦   +---error
+    ¦   ¦   ¦   ¦   +---indexes
+    ¦   ¦   ¦   ¦   +---model
+    ¦   ¦   ¦   ¦   +---path
+    ¦   ¦   ¦   ¦   +---populate
+    ¦   ¦   ¦   ¦   +---projection
+    ¦   ¦   ¦   ¦   +---query
+    ¦   ¦   ¦   ¦   +---schema
+    ¦   ¦   ¦   ¦   +---schematype
+    ¦   ¦   ¦   ¦   +---timestamps
+    ¦   ¦   ¦   ¦   +---topology
+    ¦   ¦   ¦   ¦   +---update
+    ¦   ¦   ¦   +---options
+    ¦   ¦   ¦   +---plugins
+    ¦   ¦   ¦   +---schema
+    ¦   ¦   ¦   ¦   +---operators
+    ¦   ¦   ¦   +---types
+    ¦   ¦   ¦       +---array
+    ¦   ¦   ¦       ¦   +---methods
+    ¦   ¦   ¦       +---DocumentArray
+    ¦   ¦   ¦           +---methods
+    ¦   ¦   +---node_modules
+    ¦   ¦   ¦   +---ms
+    ¦   ¦   +---types
+    ¦   +---mpath
+    ¦   ¦   +---lib
+    ¦   ¦   +---test
+    ¦   +---mquery
+    ¦   ¦   +---.github
+    ¦   ¦   +---lib
+    ¦   ¦   ¦   +---collection
+    ¦   ¦   +---node_modules
+    ¦   ¦       +---debug
+    ¦   ¦       ¦   +---src
+    ¦   ¦       +---ms
+    ¦   +---ms
+    ¦   +---multer
+    ¦   ¦   +---lib
+    ¦   ¦   +---storage
+    ¦   +---negotiator
+    ¦   ¦   +---lib
+    ¦   +---nodemon
+    ¦   ¦   +---bin
+    ¦   ¦   +---doc
+    ¦   ¦   ¦   +---cli
+    ¦   ¦   +---lib
+    ¦   ¦   ¦   +---cli
+    ¦   ¦   ¦   +---config
+    ¦   ¦   ¦   +---help
+    ¦   ¦   ¦   +---monitor
+    ¦   ¦   ¦   +---rules
+    ¦   ¦   ¦   +---utils
+    ¦   ¦   +---node_modules
+    ¦   ¦       +---debug
+    ¦   ¦       ¦   +---src
+    ¦   ¦       +---ms
+    ¦   +---normalize-path
+    ¦   +---object-assign
+    ¦   +---object-inspect
+    ¦   ¦   +---.github
+    ¦   ¦   +---example
+    ¦   ¦   +---test
+    ¦   ¦       +---browser
+    ¦   +---on-finished
+    ¦   +---parseurl
+    ¦   +---path-key
+    ¦   +---path-to-regexp
+    ¦   +---picomatch
+    ¦   ¦   +---lib
+    ¦   +---process-nextick-args
+    ¦   +---proxy-addr
+    ¦   +---pstree.remy
+    ¦   ¦   +---lib
+    ¦   ¦   +---tests
+    ¦   ¦       +---fixtures
+    ¦   +---punycode
+    ¦   +---q
+    ¦   +---qs
+    ¦   ¦   +---.github
+    ¦   ¦   +---dist
+    ¦   ¦   +---lib
+    ¦   ¦   +---test
+    ¦   +---range-parser
+    ¦   +---raw-body
+    ¦   +---readable-stream
+    ¦   ¦   +---doc
+    ¦   ¦   ¦   +---wg-meetings
+    ¦   ¦   +---lib
+    ¦   ¦   ¦   +---internal
+    ¦   ¦   ¦       +---streams
+    ¦   ¦   +---node_modules
+    ¦   ¦       +---safe-buffer
+    ¦   +---readdirp
+    ¦   +---safe-buffer
+    ¦   +---safer-buffer
+    ¦   +---semver
+    ¦   ¦   +---bin
+    ¦   ¦   +---classes
+    ¦   ¦   +---functions
+    ¦   ¦   +---internal
+    ¦   ¦   +---ranges
+    ¦   +---send
+    ¦   ¦   +---node_modules
+    ¦   ¦       +---encodeurl
+    ¦   ¦       +---ms
+    ¦   +---serve-static
+    ¦   +---setprototypeof
+    ¦   ¦   +---test
+    ¦   +---shebang-command
+    ¦   +---shebang-regex
+    ¦   +---side-channel
+    ¦   ¦   +---.github
+    ¦   ¦   +---test
+    ¦   +---side-channel-list
+    ¦   ¦   +---.github
+    ¦   ¦   +---test
+    ¦   +---side-channel-map
+    ¦   ¦   +---.github
+    ¦   ¦   +---test
+    ¦   +---side-channel-weakmap
+    ¦   ¦   +---.github
+    ¦   ¦   +---test
+    ¦   +---sift
+    ¦   ¦   +---es
+    ¦   ¦   +---es5m
+    ¦   ¦   +---lib
+    ¦   ¦   +---src
+    ¦   +---simple-update-notifier
+    ¦   ¦   +---build
+    ¦   ¦   +---src
+    ¦   +---smart-buffer
+    ¦   ¦   +---build
+    ¦   ¦   +---docs
+    ¦   ¦   +---typings
+    ¦   +---socks
+    ¦   ¦   +---build
+    ¦   ¦   ¦   +---client
+    ¦   ¦   ¦   +---common
+    ¦   ¦   +---docs
+    ¦   ¦   ¦   +---examples
+    ¦   ¦   ¦       +---javascript
+    ¦   ¦   ¦       +---typescript
+    ¦   ¦   +---typings
+    ¦   ¦       +---client
+    ¦   ¦       +---common
+    ¦   +---sparse-bitfield
+    ¦   +---sprintf-js
+    ¦   ¦   +---dist
+    ¦   ¦   +---src
+    ¦   +---statuses
+    ¦   +---streamsearch
+    ¦   ¦   +---.github
+    ¦   ¦   ¦   +---workflows
+    ¦   ¦   +---lib
+    ¦   ¦   +---test
+    ¦   +---string_decoder
+    ¦   ¦   +---lib
+    ¦   ¦   +---node_modules
+    ¦   ¦       +---safe-buffer
+    ¦   +---supports-color
+    ¦   +---to-regex-range
+    ¦   +---toidentifier
+    ¦   +---touch
+    ¦   ¦   +---bin
+    ¦   +---tr46
+    ¦   ¦   +---lib
+    ¦   +---type-is
+    ¦   +---typedarray
+    ¦   ¦   +---example
+    ¦   ¦   +---test
+    ¦   ¦       +---server
+    ¦   +---undefsafe
+    ¦   ¦   +---.github
+    ¦   ¦   ¦   +---workflows
+    ¦   ¦   +---lib
+    ¦   +---undici-types
+    ¦   +---unpipe
+    ¦   +---util-deprecate
+    ¦   +---utils-merge
+    ¦   +---vary
+    ¦   +---webidl-conversions
+    ¦   ¦   +---lib
+    ¦   +---whatwg-url
+    ¦   ¦   +---lib
+    ¦   +---which
+    ¦   ¦   +---bin
+    ¦   +---xtend
+    +---routes
+    +---utils

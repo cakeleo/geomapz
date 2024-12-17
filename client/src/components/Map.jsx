@@ -11,6 +11,7 @@ import NotesPanel from './NotesPanel';
 import { FONTS, FONT_SIZES } from '../utils/theme';
 import AuthModal from './AuthModal';
 import { getApiUrl } from '../config/api';
+import { fetchWithAuth } from '../config/api';
 
 
 function Map({ user, setUser }) {
@@ -105,13 +106,21 @@ function Map({ user, setUser }) {
     }
   };
 
-  const handleLogout = () => {
-    // Just clear the token and user state
-    localStorage.removeItem('token');
-    setUser(null);
-    setCountryNotes({}); // Clear notes from state when logging out
+  const handleLogout = async () => {
+    try {
+      await fetchWithAuth('/auth/logout', {
+        method: 'POST'
+      });
+      setUser(null);
+      setCountryNotes({});
+    } catch (error) {
+      console.error('Logout error:', error);
+      // Still clear the user state even if the server request fails
+      setUser(null);
+      setCountryNotes({});
+    }
   };
-
+        
   // Effects
   useEffect(() => {
     if (!user) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Map from './components/Map';
-import { useAuth } from './hooks/useAuth';
+import useAuth from './hooks/useAuth';
 
 function App() {
   const { user, loading, setUser } = useAuth();

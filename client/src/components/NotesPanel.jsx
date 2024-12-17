@@ -40,32 +40,35 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
       .catch(err => console.error('Error loading notes:', err));
   }, [country.id]);
   
-  const saveNotes = useCallback((noteData) => {
+  const saveNotes = useCallback(async (noteData) => {
     const token = localStorage.getItem('token');
     if (!token) return;
-  
-    // Fixed: Added missing slash in API path
-    fetch(getApiUrl(`/api/notes/${country.id}`), {  // Changed from notes${country.id}
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${token}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ notes: noteData })
-    })
-      .then(res => {
-        if (res.status === 401) {
+
+    try {
+      const response = await fetch(getApiUrl(`/notes/${country.id}`), {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ notes: noteData })
+      });
+
+      if (!response.ok) {
+        if (response.status === 401) {
           localStorage.removeItem('token');
           return;
         }
-        return res.json();
-      })
-      .then(data => {
-        if (data?.success) {
-          onNotesChange(noteData);
-        }
-      })
-      .catch(err => console.error('Error saving notes:', err));
+        throw new Error(`Failed to save notes: ${response.status}`);
+      }
+
+      const data = await response.json();
+      if (data?.success) {
+        onNotesChange(noteData);
+      }
+    } catch (error) {
+      console.error('Error saving notes:', error);
+    }
   }, [country.id, onNotesChange]);
   
   const uploadImage = async (file) => {
@@ -79,31 +82,37 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
     formData.append('countryId', country.id);
   
     try {
-      const response = await fetch(getApiUrl('/api/upload'), {
+      // Now using /api/upload/image path
+      const uploadUrl = getApiUrl('/api/upload/image');
+      console.log('Attempting upload to:', uploadUrl);
+  
+      const response = await fetch(uploadUrl, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
         },
-        body: formData
+        body: formData,
+        credentials: 'include'  // Important for cookie-based auth
       });
   
       if (!response.ok) {
-        if (response.status === 401) {
-          localStorage.removeItem('token');
-          throw new Error('Authentication expired');
-        }
         const errorText = await response.text();
-        throw new Error(errorText || 'Upload failed');
+        console.error('Server response:', errorText);
+        throw new Error(errorText || `Upload failed with status ${response.status}`);
       }
   
       const data = await response.json();
+      if (!data.imageUrl) {
+        throw new Error('No image URL received from server');
+      }
+  
       return data.imageUrl;
     } catch (error) {
-      console.error('Upload error:', error);
+      console.error('Upload error details:', error);
       throw error;
     }
   };
-      
+          
   const handleImageClick = useCallback((e, index) => {
     // Middle click - open in new tab
     if (e.button === 1) {
@@ -185,29 +194,35 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
   
         try {
           const imageUrl = await uploadImage(file);
+          if (!imageUrl) {
+            throw new Error('Failed to get image URL from server');
+          }
+          
           const updatedNotes = {
             ...notes[country.id],
             text: notes[country.id]?.text || '',
             images: [...(notes[country.id]?.images || []), imageUrl]
           };
-          onNotesChange(updatedNotes);
+  
+          // Save notes with new image
+          await saveNotes(updatedNotes);
+          
         } catch (error) {
-          if (error.message === 'Authentication expired') {
+          if (error.message.includes('401')) {
             alert('Your session has expired. Please log in again.');
-            // You might want to trigger a logout action here
             return;
           }
           throw error;
         }
       }
     } catch (error) {
-      alert('Error uploading image. Please try again.');
+      alert('Error uploading image: ' + error.message);
       console.error('Upload error:', error);
     } finally {
       setIsUploading(false);
     }
   };
-    
+      
   const handleDrag = useCallback((e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -269,37 +284,25 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
   };
   
   const fetchCountryNotes = async (countryId) => {
-    const token = localStorage.getItem('token');
-    if (!token) return;
-  
     try {
       const response = await fetch(getApiUrl(`/api/notes/${countryId}`), {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
+        credentials: 'include'
       });
   
       if (response.status === 401) {
-        // Token expired or invalid
-        localStorage.removeItem('token');
-        setUser(null);
-        alert('Your session has expired. Please log in again.');
+        // Handle unauthorized - maybe redirect to login
         return;
       }
   
-      if (!response.ok) {
-        throw new Error('Failed to fetch notes');
-      }
-  
-      const data = await response.json();
-      if (data.notes) {
+      if (response.ok) {
+        const data = await response.json();
         onNotesChange(data.notes);
       }
     } catch (error) {
-      console.error('Error loading notes:', error);
+      console.error('Error fetching notes:', error);
     }
   };
-  
+    
 
   const removeImage = useCallback(async (indexToRemove) => {
     const token = localStorage.getItem('token');

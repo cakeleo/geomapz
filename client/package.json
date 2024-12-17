@@ -8,7 +8,9 @@
         "use-glitch": "node switch-server.js glitch && npm run dev",
         "dev": "vite",
         "build": "vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "dev:prod": "vite --mode production",
+        "build:dev": "vite build --mode development"
     },
     "dependencies": {
         "@cloudinary/url-gen": "^1.21.0",
