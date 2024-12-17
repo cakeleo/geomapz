@@ -19,7 +19,6 @@ const __dirname = path.dirname(__filename);
 dotenv.config();
 
 // Initialize express app
-import express from 'express';
 import multer from 'multer';
 import cloudinary from '../config/cloudinary.js';
 import { auth } from '../middleware/auth.js';
