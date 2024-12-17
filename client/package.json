@@ -4,6 +4,8 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
+        "use-local": "node switch-server.js local && npm run dev",
+        "use-glitch": "node switch-server.js glitch && npm run dev",
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview"

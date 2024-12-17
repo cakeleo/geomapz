@@ -1,4 +1,3 @@
-// server.js
 import dotenv from 'dotenv';
 import express from 'express';
 import path from 'path';
@@ -6,11 +5,10 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+import cookieParser from 'cookie-parser';
 import { fileURLToPath } from 'url';
-import { User } from './models/User.js';  // Updated import
-
+import { User } from './models/User.js';
 import { createServer } from 'http';
-
 
 // ES Module fix for __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -36,12 +34,13 @@ if (!process.env.JWT_SECRET || !process.env.MONGODB_URI) {
 // Middleware
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: true, limit: '1mb' }));
+app.use(cookieParser());
 
 // CORS configuration
 app.use(cors({
     origin: process.env.NODE_ENV === 'development' 
       ? ['http://localhost:3000', 'http://localhost:5173'] 
-      : process.env.ALLOWED_ORIGINS?.split(',') || [],
+      : ['https://geomatecake.vercel.app'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
@@ -65,7 +64,7 @@ connectDB();
 // Auth Middleware
 const authMiddleware = async (req, res, next) => {
   try {
-    const token = req.headers.authorization?.split(' ')[1];
+    const token = req.cookies.auth_token;
     if (!token) {
       return res.status(401).json({ error: 'No token provided' });
     }
@@ -109,7 +108,14 @@ app.post('/api/register', async (req, res) => {
       { expiresIn: '24h' }
     );
 
-    res.status(201).json({ token });
+    res.cookie('auth_token', token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+      maxAge: 24 * 60 * 60 * 1000 // 24 hours
+    });
+
+    res.status(201).json({ message: 'Registered successfully', username });
   } catch (error) {
     console.error('Registration error:', error);
     res.status(500).json({ error: 'Registration failed' });
@@ -119,7 +125,6 @@ app.post('/api/register', async (req, res) => {
 app.get('/ping', (req, res) => {
   res.status(200).send('OK');
 });
-
 
 // Login endpoint
 app.post('/api/login', async (req, res) => {
@@ -142,11 +147,28 @@ app.post('/api/login', async (req, res) => {
       { expiresIn: '24h' }
     );
 
-    res.json({ token });
+    res.cookie('auth_token', token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+      maxAge: 24 * 60 * 60 * 1000 // 24 hours
+    });
+
+    res.json({ message: 'Logged in successfully', username });
   } catch (error) {
     console.error('Login error:', error);
     res.status(500).json({ error: 'Login failed' });
   }
+});
+
+// Logout endpoint
+app.post('/api/logout', (req, res) => {
+  res.clearCookie('auth_token', {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
+  });
+  res.json({ message: 'Logged out successfully' });
 });
 
 // Auth check endpoint
@@ -208,7 +230,7 @@ const pingInterval = 4 * 60 * 1000; // 4 minutes
 const wake = () => {
   try {
     const options = {
-      host: 'geomapz.glitch.me', // Update this with your actual Glitch project name
+      host: 'geomapz.glitch.me',
       path: '/ping'
     };
     createServer().request(options).end();

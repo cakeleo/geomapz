@@ -1,4 +1,3 @@
-// AuthModal.jsx
 import React, { useState } from 'react';
 import { FONTS, FONT_SIZES } from '../utils/theme';
 
@@ -8,8 +7,13 @@ function AuthModal({ onClose, onAuth }) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  // Get the API URL from environment variables
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+  // Dynamic API URL based on environment
+  const useLocalServer = import.meta.env.VITE_USE_LOCAL_SERVER === 'true';
+  const API_URL = useLocalServer 
+    ? 'http://localhost:3001'
+    : 'https://geomapz.glitch.me';
+
+  console.log('Current API URL:', API_URL); // For debugging
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,19 +28,18 @@ function AuthModal({ onClose, onAuth }) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }),
-        credentials: 'include'
+        credentials: 'include',
+        body: JSON.stringify({ username, password })
       });
 
-      const data = await response.json();
-
       if (!response.ok) {
+        const data = await response.json();
         throw new Error(data.error || `${endpoint} failed`);
       }
 
+      const data = await response.json();
       console.log(`${endpoint} successful:`, data);
-      localStorage.setItem('token', data.token);
-      onAuth(username);
+      onAuth(data.username);
       onClose();
       
     } catch (error) {
@@ -151,3 +154,4 @@ function AuthModal({ onClose, onAuth }) {
 }
 
 export default AuthModal;
+
