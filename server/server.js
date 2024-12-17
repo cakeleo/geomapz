@@ -26,7 +26,7 @@ const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5173',
   'https://geomap2-p28q8xztx-leos-projects-66282186.vercel.app',
-  'https://geomapz.glitch.me'
+  'https://geomapsez.glitch.me'
 ];
 
 app.use(cors({
@@ -247,7 +247,7 @@ const pingInterval = 4 * 60 * 1000; // 4 minutes
 const wake = () => {
   try {
     const options = {
-      host: 'geomapz.glitch.me',
+      host: 'geomapsez.glitch.me',
       path: '/ping'
     };
     createServer().request(options).end();
