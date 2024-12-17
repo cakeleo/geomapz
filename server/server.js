@@ -8,7 +8,6 @@ import jwt from 'jsonwebtoken';
 import cookieParser from 'cookie-parser';
 import { fileURLToPath } from 'url';
 import { User } from './models/User.js';
-import { createServer } from 'http';
 
 // ES Module fix for __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -21,13 +20,10 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3001;
 
-// CORS configuration - Updated for Vercel deployment
-const allowedOrigins = [
-  'http://localhost:3000',
-  'http://localhost:5173',
-  'https://geomap2-p28q8xztx-leos-projects-66282186.vercel.app',
-  'https://geocake.glitch.me'
-];
+// CORS configuration
+const allowedOrigins = process.env.NODE_ENV === 'production' 
+  ? ['https://geomatecake.vercel.app']
+  : ['http://localhost:3000', 'http://localhost:5173'];
 
 app.use(cors({
   origin: function(origin, callback) {
@@ -52,16 +48,6 @@ app.options('*', cors());
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: true, limit: '1mb' }));
 app.use(cookieParser());
-
-// CORS configuration
-app.use(cors({
-    origin: process.env.NODE_ENV === 'development' 
-      ? ['http://localhost:3000', 'http://localhost:5173'] 
-      : ['https://geomatecake.vercel.app'],
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
 
 // Database Connection
 const connectDB = async (retries = 5) => {
@@ -92,42 +78,6 @@ const connectDB = async (retries = 5) => {
   }
 };
 
-// CORS configuration
-const corsOptions = {
-  origin: (origin, callback) => {
-    const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');
-    
-    // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
-    
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-      return callback(new Error(msg), false);
-    }
-    
-    return callback(null, true);
-  },
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-};
-
-// Error handling middleware
-const errorHandler = (err, req, res, next) => {
-  console.error(err.stack);
-  
-  if (err.name === 'UnauthorizedError') {
-    return res.status(401).json({ error: 'Invalid token' });
-  }
-  
-  res.status(500).json({ 
-    error: process.env.NODE_ENV === 'development' ? err.message : 'Internal server error'
-  });
-};
-
-// Connect to MongoDB when server starts
-connectDB();
-
 // Auth Middleware
 const authMiddleware = async (req, res, next) => {
   try {
@@ -144,9 +94,13 @@ const authMiddleware = async (req, res, next) => {
   }
 };
 
-// Routes
+// Basic health check route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.json({ status: 'API is running' });
+});
+
+app.get('/ping', (req, res) => {
+  res.status(200).send('OK');
 });
 
 // Register endpoint
@@ -187,10 +141,6 @@ app.post('/api/register', async (req, res) => {
     console.error('Registration error:', error);
     res.status(500).json({ error: 'Registration failed' });
   }
-});
-
-app.get('/ping', (req, res) => {
-  res.status(200).send('OK');
 });
 
 // Login endpoint
@@ -284,25 +234,17 @@ app.post('/api/notes/:countryId', authMiddleware, async (req, res) => {
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).json({ error: 'Something broke!' });
+  res.status(500).json({ 
+    error: process.env.NODE_ENV === 'development' ? err.message : 'Internal server error'
+  });
 });
 
+// Connect to MongoDB when server starts
+connectDB();
+
+// Start server
 app.listen(port, () => {
   const startTime = new Date().toISOString();
   console.log(`Server awakened at ${startTime}`);
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running on port ${port}`);
 });
-
-const pingInterval = 4 * 60 * 1000; // 4 minutes
-const wake = () => {
-  try {
-    const options = {
-      host: 'geocake.glitch.me',
-      path: '/ping'
-    };
-    createServer().request(options).end();
-  } catch (err) {
-    console.log('Ping error:', err);
-  }
-};
-setInterval(wake, pingInterval);
