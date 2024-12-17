@@ -11,7 +11,7 @@ function AuthModal({ onClose, onAuth }) {
   const useLocalServer = import.meta.env.VITE_USE_LOCAL_SERVER === 'true';
   const API_URL = useLocalServer 
     ? 'http://localhost:3001'
-    : 'https://geomapz.glitch.me';
+    : 'https://geocake.glitch.me';
 
   console.log('Current API URL:', API_URL); // For debugging
 
