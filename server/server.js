@@ -22,7 +22,7 @@ const port = process.env.PORT || 3001;
 
 // CORS configuration
 const allowedOrigins = process.env.NODE_ENV === 'production' 
-  ? ['https://geomatecake.vercel.app']
+  ? ['https://geomatecake.vercel.app', 'https://geomap2-fd7e24jzi-leos-projects-66282186.vercel.app/']
   : ['http://localhost:3000', 'http://localhost:5173'];
 
 app.use(cors({
