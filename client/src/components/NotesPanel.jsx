@@ -79,24 +79,21 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
     formData.append('countryId', country.id);
   
     try {
-      // Note: Don't set Content-Type header when sending FormData
       const response = await fetch(getApiUrl('/api/upload'), {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
-          // Remove Content-Type header - browser will set it automatically with boundary
         },
         body: formData
       });
-      
-      if (response.status === 401) {
-        localStorage.removeItem('token');
-        throw new Error('Authentication required');
-      }
-      
+  
       if (!response.ok) {
-        const error = await response.text();
-        throw new Error(error || 'Upload failed');
+        if (response.status === 401) {
+          localStorage.removeItem('token');
+          throw new Error('Authentication expired');
+        }
+        const errorText = await response.text();
+        throw new Error(errorText || 'Upload failed');
       }
   
       const data = await response.json();
@@ -106,7 +103,7 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
       throw error;
     }
   };
-    
+      
   const handleImageClick = useCallback((e, index) => {
     // Middle click - open in new tab
     if (e.button === 1) {
@@ -186,28 +183,31 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
           continue;
         }
   
-        const imageUrl = await uploadImage(file);
-        
-        const updatedNotes = {
-          ...notes[country.id],
-          text: notes[country.id]?.text || '',
-          images: [...(notes[country.id]?.images || []), imageUrl]
-        };
-        
-        onNotesChange(updatedNotes);
+        try {
+          const imageUrl = await uploadImage(file);
+          const updatedNotes = {
+            ...notes[country.id],
+            text: notes[country.id]?.text || '',
+            images: [...(notes[country.id]?.images || []), imageUrl]
+          };
+          onNotesChange(updatedNotes);
+        } catch (error) {
+          if (error.message === 'Authentication expired') {
+            alert('Your session has expired. Please log in again.');
+            // You might want to trigger a logout action here
+            return;
+          }
+          throw error;
+        }
       }
     } catch (error) {
-      if (error.message.includes('Authentication required')) {
-        alert('Please log in to upload images');
-      } else {
-        alert('Error uploading image. Please try again.');
-      }
+      alert('Error uploading image. Please try again.');
       console.error('Upload error:', error);
     } finally {
       setIsUploading(false);
     }
   };
-  
+    
   const handleDrag = useCallback((e) => {
     e.preventDefault();
     e.stopPropagation();
