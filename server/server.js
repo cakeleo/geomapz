@@ -21,7 +21,7 @@ dotenv.config();
 
 // Initialize express app
 import multer from 'multer';
-import { auth } from '../middleware/auth.js';
+import { auth } from './middleware/auth.js';
 
 const router = express.Router();
 
