@@ -64,15 +64,65 @@ app.use(cors({
 }));
 
 // Database Connection
-const connectDB = async () => {
+const connectDB = async (retries = 5) => {
   try {
     if (mongoose.connections[0].readyState) return;
-    await mongoose.connect(process.env.MONGODB_URI);
+    
+    if (!process.env.MONGODB_URI) {
+      throw new Error('MONGODB_URI not found in environment variables');
+    }
+    
+    await mongoose.connect(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    
     console.log('MongoDB connected successfully');
   } catch (error) {
     console.error('MongoDB connection error:', error);
+    
+    if (retries > 0) {
+      console.log(`Retrying connection... ${retries} attempts remaining`);
+      await new Promise(resolve => setTimeout(resolve, 5000)); // Wait 5 seconds
+      return connectDB(retries - 1);
+    }
+    
+    console.error('Failed to connect to MongoDB after all retries');
     process.exit(1);
   }
+};
+
+// CORS configuration
+const corsOptions = {
+  origin: (origin, callback) => {
+    const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');
+    
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    
+    return callback(null, true);
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+// Error handling middleware
+const errorHandler = (err, req, res, next) => {
+  console.error(err.stack);
+  
+  if (err.name === 'UnauthorizedError') {
+    return res.status(401).json({ error: 'Invalid token' });
+  }
+  
+  res.status(500).json({ 
+    error: process.env.NODE_ENV === 'development' ? err.message : 'Internal server error'
+  });
 };
 
 // Connect to MongoDB when server starts
