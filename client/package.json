@@ -11,6 +11,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@cloudinary/url-gen": "^1.21.0",
         "d3-geo": "^3.1.0",
         "d3-selection": "^3.0.0",
         "d3-zoom": "^3.0.0",

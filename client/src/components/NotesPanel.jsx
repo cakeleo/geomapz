@@ -7,6 +7,7 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
 
   const [isDragging, setIsDragging] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [isUploading, setIsUploading] = useState(false);
   const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB in bytes
   const SUPPORTED_FORMATS = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
   const MAX_IMAGES_PER_COUNTRY = 10;
@@ -25,7 +26,7 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
       .then(res => res.json())
       .then(data => {
         if (data.notes) {
-          onNotesChange(country.id, data.notes);
+          onNotesChange(data.notes);
         }
       })
       .catch(err => console.error('Error loading notes:', err));
@@ -46,11 +47,37 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
       .then(res => res.json())
       .then(data => {
         if (data.success) {
-          onNotesChange(country.id, noteData);
+          onNotesChange(noteData);
         }
       })
       .catch(err => console.error('Error saving notes:', err));
   }, [country.id, onNotesChange]);
+
+  const uploadImage = async (file) => {
+    const formData = new FormData();
+    formData.append('image', file);
+    formData.append('countryId', country.id);
+
+    try {
+      const response = await fetch('/api/upload', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        },
+        body: formData
+      });
+
+      if (!response.ok) {
+        throw new Error('Upload failed');
+      }
+
+      const data = await response.json();
+      return data.imageUrl;
+    } catch (error) {
+      console.error('Upload error:', error);
+      throw error;
+    }
+  };
 
   const handleImageClick = useCallback((e, index) => {
     // Middle click - open in new tab
@@ -104,7 +131,7 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
     saveNotes(updatedNotes);
   }, [country.id, notes, saveNotes]);
 
-  const handleImageUpload = (e) => {
+  const handleImageUpload = async (e) => {
     const files = Array.from(e.target.files);
     const currentImageCount = notes[country.id]?.images?.length || 0;
     const remainingSlots = MAX_IMAGES_PER_COUNTRY - currentImageCount;
@@ -113,29 +140,34 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
       alert(`Maximum ${MAX_IMAGES_PER_COUNTRY} images allowed per country`);
       return;
     }
-  
-    // Only process up to the remaining slots
+
     const filesToProcess = files.slice(0, remainingSlots);
-    
-    filesToProcess.forEach(file => {
-      const validation = validateImage(file, currentImageCount);
-      
-      if (!validation.valid) {
-        alert(validation.error);
-        return;
-      }
-  
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const newImage = event.target.result;
-        saveNotes({
+    setIsUploading(true);
+
+    try {
+      for (const file of filesToProcess) {
+        const validation = validateImage(file, currentImageCount);
+        if (!validation.valid) {
+          alert(validation.error);
+          continue;
+        }
+
+        const imageUrl = await uploadImage(file);
+        
+        const updatedNotes = {
           ...notes[country.id],
           text: notes[country.id]?.text || '',
-          images: [...(notes[country.id]?.images || []), newImage]
-        });
-      };
-      reader.readAsDataURL(file);
-    });
+          images: [...(notes[country.id]?.images || []), imageUrl]
+        };
+        
+        onNotesChange(updatedNotes);
+      }
+    } catch (error) {
+      alert('Error uploading image. Please try again.');
+      console.error('Upload error:', error);
+    } finally {
+      setIsUploading(false);
+    }
   };
 
   const handleDrag = useCallback((e) => {
@@ -155,56 +187,78 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
     setIsDragging(false);
   }, []);
 
-  const handleDrop = (e) => {
+  const handleDrop = async (e) => {
     e.preventDefault();
     e.stopPropagation();
     setIsDragging(false);
-  
+    
     const files = [...e.dataTransfer.files];
     const currentImageCount = notes[country.id]?.images?.length || 0;
     const remainingSlots = MAX_IMAGES_PER_COUNTRY - currentImageCount;
-  
+
     if (remainingSlots <= 0) {
       alert(`Maximum ${MAX_IMAGES_PER_COUNTRY} images allowed per country`);
       return;
     }
-  
+
     const filesToProcess = files.slice(0, remainingSlots);
-    let hasErrors = false;
-  
-    filesToProcess.forEach(file => {
-      const validation = validateImage(file, currentImageCount);
-      
-      if (!validation.valid) {
-        alert(validation.error);
-        hasErrors = true;
-        return;
-      }
-    });
-  
-    if (hasErrors) return;
-  
-    filesToProcess.forEach(file => {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const newImage = event.target.result;
-        saveNotes({
+    setIsUploading(true);
+
+    try {
+      for (const file of filesToProcess) {
+        const validation = validateImage(file, currentImageCount);
+        if (!validation.valid) {
+          alert(validation.error);
+          continue;
+        }
+
+        const imageUrl = await uploadImage(file);
+        
+        const updatedNotes = {
           ...notes[country.id],
           text: notes[country.id]?.text || '',
-          images: [...(notes[country.id]?.images || []), newImage]
-        });
-      };
-      reader.readAsDataURL(file);
-    });
+          images: [...(notes[country.id]?.images || []), imageUrl]
+        };
+        
+        onNotesChange(updatedNotes);
+      }
+    } catch (error) {
+      alert('Error uploading image. Please try again.');
+      console.error('Drop error:', error);
+    } finally {
+      setIsUploading(false);
+    }
   };
-  
-  const removeImage = useCallback((indexToRemove) => {
-    const updatedImages = notes[country.id]?.images?.filter((_, index) => index !== indexToRemove);
-    saveNotes({
-      ...notes[country.id],
-      images: updatedImages
-    });
-  }, [country.id, notes, saveNotes]);
+
+  const removeImage = useCallback(async (indexToRemove) => {
+    try {
+      const imageUrl = notes[country.id]?.images[indexToRemove];
+      if (!imageUrl) return;
+
+      // Call API to remove image from Cloudinary
+      const response = await fetch(`/api/upload/${country.id}/${indexToRemove}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to delete image');
+      }
+
+      // Update local state
+      const updatedImages = notes[country.id]?.images?.filter((_, index) => index !== indexToRemove);
+      const updatedNotes = {
+        ...notes[country.id],
+        images: updatedImages
+      };
+      onNotesChange(updatedNotes);
+    } catch (error) {
+      console.error('Error removing image:', error);
+      alert('Failed to remove image. Please try again.');
+    }
+  }, [country.id, notes, onNotesChange]);
 
   return (
     <div 
@@ -316,9 +370,10 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
             gap: '8px',
             padding: '8px',
             backgroundColor: 'rgba(255, 255, 255, 0.1)',
-            borderRadius: '8px'
+            borderRadius: '8px',
+            position: 'relative'
           }}>
-            {notes[country.id].images.map((img, index) => (
+            {notes[country.id].images.map((imageUrl, index) => (
               <div 
                 key={index}
                 style={{
@@ -328,7 +383,7 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
                 }}
               >
                 <img 
-                  src={img}
+                  src={imageUrl}
                   alt={`Note image ${index + 1}`}
                   style={{
                     width: '100%',
@@ -359,7 +414,6 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     fontSize: '12px',
-                    fontFamily: FONTS.secondary,
                     padding: 0
                   }}
                 >
@@ -367,8 +421,25 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
                 </button>
               </div>
             ))}
+            {isUploading && (
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: 'rgba(255, 255, 255, 0.5)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: '8px'
+              }}>
+                Uploading...
+              </div>
+            )}
           </div>
         )}
+
 
         {/* Image Overlay */}
         {selectedImage !== null && (
@@ -427,7 +498,7 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
             </div>
           </label>
         </div>
-      </div>
+        </div>
     </div>
   );
 };
