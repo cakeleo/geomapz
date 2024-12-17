@@ -9,6 +9,7 @@ import cookieParser from 'cookie-parser';
 import { fileURLToPath } from 'url';
 import { User } from './models/User.js';
 import uploadRouter from './routes/upload.js';
+import cloudinary from './config/cloudinary.js';  // Note the ./
 
 
 // ES Module fix for __dirname
@@ -20,7 +21,6 @@ dotenv.config();
 
 // Initialize express app
 import multer from 'multer';
-import cloudinary from '../config/cloudinary.js';
 import { auth } from '../middleware/auth.js';
 
 const router = express.Router();
