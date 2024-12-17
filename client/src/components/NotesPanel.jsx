@@ -17,27 +17,35 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
     const token = localStorage.getItem('token');
     if (!token) return;
     
-    // Load user-specific notes for this country
-    fetch(getApiUrl(`/api/notes${country.id}`), {
+    // Fixed: Added missing slash in API path
+    fetch(getApiUrl(`/api/notes/${country.id}`), {  // Changed from notes${country.id}
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json'
       }
     })
-      .then(res => res.json())
+      .then(res => {
+        if (res.status === 401) {
+          localStorage.removeItem('token');
+          // Note: You'll need to pass setUser as a prop if you want to clear the user state
+          return;
+        }
+        return res.json();
+      })
       .then(data => {
-        if (data.notes) {
+        if (data?.notes) {
           onNotesChange(data.notes);
         }
       })
       .catch(err => console.error('Error loading notes:', err));
   }, [country.id]);
-
+  
   const saveNotes = useCallback((noteData) => {
     const token = localStorage.getItem('token');
     if (!token) return;
-
-    fetch(getApiUrl(`/api/notes${country.id}`), {
+  
+    // Fixed: Added missing slash in API path
+    fetch(getApiUrl(`/api/notes/${country.id}`), {  // Changed from notes${country.id}
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -45,32 +53,52 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
       },
       body: JSON.stringify({ notes: noteData })
     })
-      .then(res => res.json())
+      .then(res => {
+        if (res.status === 401) {
+          localStorage.removeItem('token');
+          return;
+        }
+        return res.json();
+      })
       .then(data => {
-        if (data.success) {
+        if (data?.success) {
           onNotesChange(noteData);
         }
       })
       .catch(err => console.error('Error saving notes:', err));
   }, [country.id, onNotesChange]);
-
+  
   const uploadImage = async (file) => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      throw new Error('Authentication required');
+    }
+  
     const formData = new FormData();
     formData.append('image', file);
     formData.append('countryId', country.id);
   
     try {
+      // Note: Don't set Content-Type header when sending FormData
       const response = await fetch(getApiUrl('/api/upload'), {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('token')}`
+          'Authorization': `Bearer ${token}`
+          // Remove Content-Type header - browser will set it automatically with boundary
         },
         body: formData
       });
-      if (!response.ok) {
-        throw new Error('Upload failed');
+      
+      if (response.status === 401) {
+        localStorage.removeItem('token');
+        throw new Error('Authentication required');
       }
-
+      
+      if (!response.ok) {
+        const error = await response.text();
+        throw new Error(error || 'Upload failed');
+      }
+  
       const data = await response.json();
       return data.imageUrl;
     } catch (error) {
@@ -78,7 +106,7 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
       throw error;
     }
   };
-
+    
   const handleImageClick = useCallback((e, index) => {
     // Middle click - open in new tab
     if (e.button === 1) {
@@ -132,6 +160,12 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
   }, [country.id, notes, saveNotes]);
 
   const handleImageUpload = async (e) => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      alert('Please log in to upload images');
+      return;
+    }
+  
     const files = Array.from(e.target.files);
     const currentImageCount = notes[country.id]?.images?.length || 0;
     const remainingSlots = MAX_IMAGES_PER_COUNTRY - currentImageCount;
@@ -140,10 +174,10 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
       alert(`Maximum ${MAX_IMAGES_PER_COUNTRY} images allowed per country`);
       return;
     }
-
+  
     const filesToProcess = files.slice(0, remainingSlots);
     setIsUploading(true);
-
+  
     try {
       for (const file of filesToProcess) {
         const validation = validateImage(file, currentImageCount);
@@ -151,7 +185,7 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
           alert(validation.error);
           continue;
         }
-
+  
         const imageUrl = await uploadImage(file);
         
         const updatedNotes = {
@@ -163,13 +197,17 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
         onNotesChange(updatedNotes);
       }
     } catch (error) {
-      alert('Error uploading image. Please try again.');
+      if (error.message.includes('Authentication required')) {
+        alert('Please log in to upload images');
+      } else {
+        alert('Error uploading image. Please try again.');
+      }
       console.error('Upload error:', error);
     } finally {
       setIsUploading(false);
     }
   };
-
+  
   const handleDrag = useCallback((e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -229,25 +267,65 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
       setIsUploading(false);
     }
   };
+  
+  const fetchCountryNotes = async (countryId) => {
+    const token = localStorage.getItem('token');
+    if (!token) return;
+  
+    try {
+      const response = await fetch(getApiUrl(`/api/notes/${countryId}`), {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+  
+      if (response.status === 401) {
+        // Token expired or invalid
+        localStorage.removeItem('token');
+        setUser(null);
+        alert('Your session has expired. Please log in again.');
+        return;
+      }
+  
+      if (!response.ok) {
+        throw new Error('Failed to fetch notes');
+      }
+  
+      const data = await response.json();
+      if (data.notes) {
+        onNotesChange(data.notes);
+      }
+    } catch (error) {
+      console.error('Error loading notes:', error);
+    }
+  };
+  
 
   const removeImage = useCallback(async (indexToRemove) => {
+    const token = localStorage.getItem('token');
+    if (!token) return;
+  
     try {
       const imageUrl = notes[country.id]?.images[indexToRemove];
       if (!imageUrl) return;
-
-      // Call API to remove image from Cloudinary
-      const response = await fetch(getApiUrl(`/api/notes${country.id}/${indexToRemove}`), {
+  
+      // Fixed: Added missing slash in API path
+      const response = await fetch(getApiUrl(`/api/notes/${country.id}/${indexToRemove}`), {
         method: 'DELETE',
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('token')}`
+          'Authorization': `Bearer ${token}`
         }
       });
-
+  
+      if (response.status === 401) {
+        localStorage.removeItem('token');
+        return;
+      }
+  
       if (!response.ok) {
         throw new Error('Failed to delete image');
       }
-
-      // Update local state
+  
       const updatedImages = notes[country.id]?.images?.filter((_, index) => index !== indexToRemove);
       const updatedNotes = {
         ...notes[country.id],
@@ -259,7 +337,7 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
       alert('Failed to remove image. Please try again.');
     }
   }, [country.id, notes, onNotesChange]);
-
+  
   return (
     <div 
       style={{

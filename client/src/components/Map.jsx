@@ -22,11 +22,11 @@ function Map({ user, setUser }) {
   const [countryNotes, setCountryNotes] = useState({});
   const [showAuthModal, setShowAuthModal] = useState(false);
 
-  const handleAuth = (username) => {
+  const handleAuth = (token, username) => {
+    localStorage.setItem('token', token); // Store the token
     setUser(username);
     setShowAuthModal(false);
   };
-  
 
   // Refs
   const containerRef = useRef(null);
