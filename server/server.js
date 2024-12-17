@@ -16,10 +16,24 @@ const __dirname = path.dirname(__filename);
 // Initialize dotenv
 dotenv.config();
 
+
+
 const allowedOrigins = [
+  // Local development
   'http://localhost:3000',
   'http://localhost:5173',
+  'http://127.0.0.1:5173',
+  
+  // Production URLs
+  'https://geomatecake.vercel.app',
+  'https://geomatecake-git-main.vercel.app',
+  'https://geomatecake-*.vercel.app', // For preview deployments
+
   'https://geomap2-pr0d8w98l-leos-projects-66282186.vercel.app/',
+
+  
+  // Add your development/staging URLs if any
+  'https://geomatecake-staging.vercel.app'
 ];
 
 const app = express();
