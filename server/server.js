@@ -21,15 +21,32 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3001;
 
-// Serve static files from client/public
-const clientPublicPath = path.join(__dirname, '../client/public');
-app.use(express.static(clientPublicPath));
+// CORS configuration - Updated for Vercel deployment
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:5173',
+  'https://geomap2-p28q8xztx-leos-projects-66282186.vercel.app',
+  'https://geomapz.glitch.me'
+];
 
-// Environment variable checks
-if (!process.env.JWT_SECRET || !process.env.MONGODB_URI) {
-  console.error('Required environment variables are missing');
-  process.exit(1);
-}
+app.use(cors({
+  origin: function(origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
+}));
+
+// Pre-flight requests
+app.options('*', cors());
 
 // Middleware
 app.use(express.json({ limit: '1mb' }));
