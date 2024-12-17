@@ -10,6 +10,8 @@ import capitals from '../data/capitals.json';
 import NotesPanel from './NotesPanel';
 import { FONTS, FONT_SIZES } from '../utils/theme';
 import AuthModal from './AuthModal';
+import { getApiUrl } from '../config/api';
+
 
 function Map({ user, setUser }) {
   // State declarations
@@ -51,12 +53,12 @@ function Map({ user, setUser }) {
   const fetchCountryNotes = async (countryId) => {
     if (!user) return;
 
-    try {
-      const response = await fetch(`/api/notes/${countryId}`, {
-        headers: {
-          'Authorization': `Bearer ${localStorage.getItem('token')}`
-        }
-      });
+  try {
+    const response = await fetch(getApiUrl(`/api/notes/${countryId}`), {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    });
 
       if (response.ok) {
         const data = await response.json();

@@ -18,7 +18,8 @@ dotenv.config();
 
 const allowedOrigins = [
   'http://localhost:3000',
-  'http://localhost:5173', // Vite's default port
+  'http://localhost:5173',
+  'https://geomap2-pr0d8w98l-leos-projects-66282186.vercel.app/',
 ];
 
 const app = express();

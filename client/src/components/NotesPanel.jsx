@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import ImageOverlay from './ImageOverlay';
 import { FONTS, FONT_SIZES, FONT_WEIGHTS } from '../utils/theme';
+import { getApiUrl } from '../config/api';
 
 const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
   if (!country) return null;
@@ -17,7 +18,7 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
     if (!token) return;
     
     // Load user-specific notes for this country
-    fetch(`/api/notes/${country.id}`, {
+    fetch(getApiUrl(`/api/notes${country.id}`), {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json'
@@ -36,7 +37,7 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
     const token = localStorage.getItem('token');
     if (!token) return;
 
-    fetch(`/api/notes/${country.id}`, {
+    fetch(getApiUrl(`/api/notes${country.id}`), {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -57,16 +58,15 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
     const formData = new FormData();
     formData.append('image', file);
     formData.append('countryId', country.id);
-
+  
     try {
-      const response = await fetch('/api/upload', {
+      const response = await fetch(getApiUrl('/api/upload'), {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
         body: formData
       });
-
       if (!response.ok) {
         throw new Error('Upload failed');
       }
@@ -236,7 +236,7 @@ const NotesPanel = ({ country, notes, onNotesChange, onClose }) => {
       if (!imageUrl) return;
 
       // Call API to remove image from Cloudinary
-      const response = await fetch(`/api/upload/${country.id}/${indexToRemove}`, {
+      const response = await fetch(getApiUrl(`/api/notes${country.id}/${indexToRemove}`), {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
