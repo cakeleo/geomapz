@@ -1,15 +1,16 @@
 {
-  "install": "npm install",
-  "start": "npm start",
+  "install": "cd server && npm install",
+  "start": "cd server && npm start",
   "watch": {
     "ignore": [
       "\\.git",
-      "node_modules/**/node_modules"
+      "node_modules/**/node_modules",
+      "client/**"
     ],
     "install": {
       "include": [
-        "^package\\.json$",
-        "^server/package\\.json$"
+        "^server/package\\.json$",
+        "^\\.env$"
       ]
     },
     "restart": {
