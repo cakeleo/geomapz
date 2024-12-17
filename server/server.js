@@ -8,6 +8,8 @@ import jwt from 'jsonwebtoken';
 import cookieParser from 'cookie-parser';
 import { fileURLToPath } from 'url';
 import { User } from './models/User.js';
+import uploadRouter from './routes/upload.js';
+
 
 // ES Module fix for __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -17,32 +19,85 @@ const __dirname = path.dirname(__filename);
 dotenv.config();
 
 // Initialize express app
-const app = express();
-const port = process.env.PORT || 3001;
+import express from 'express';
+import multer from 'multer';
+import cloudinary from '../config/cloudinary.js';
+import { auth } from '../middleware/auth.js';
 
-// CORS configuration
-const allowedOrigins = process.env.NODE_ENV === 'production' 
-  ? ['https://geomatecake.vercel.app', 'https://geomap2-fd7e24jzi-leos-projects-66282186.vercel.app/']
-  : ['http://localhost:3000', 'http://localhost:5173'];
+const router = express.Router();
 
-app.use(cors({
-  origin: function(origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
-    
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-      return callback(new Error(msg), false);
+// Configure multer for memory storage
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: {
+    fileSize: 5 * 1024 * 1024 // 5MB limit
+  }
+});
+
+// Handle preflight requests for upload endpoint
+router.options('/api/upload', (req, res) => {
+  res.header('Access-Control-Allow-Methods', 'POST');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.status(200).send();
+});
+
+router.post('/api/upload', auth, upload.single('image'), async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ error: 'No file uploaded' });
     }
-    return callback(null, true);
-  },
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
-}));
 
-// Pre-flight requests
-app.options('*', cors());
+    // Convert buffer to base64 for Cloudinary
+    const base64Image = req.file.buffer.toString('base64');
+    const dataURI = `data:${req.file.mimetype};base64,${base64Image}`;
+
+    // Upload to Cloudinary
+    const result = await cloudinary.uploader.upload(dataURI, {
+      folder: `geomap/${req.user._id}`,
+      resource_type: 'auto'
+    });
+
+    // Set CORS headers explicitly
+    res.header('Access-Control-Allow-Origin', req.headers.origin);
+    res.header('Access-Control-Allow-Credentials', true);
+    
+    res.json({ 
+      success: true, 
+      imageUrl: result.secure_url 
+    });
+
+  } catch (error) {
+    console.error('Upload error:', error);
+    res.status(500).json({ error: 'Upload failed' });
+  }
+});
+
+// Handle preflight requests for delete endpoint
+router.options('/api/upload/:countryId/:imageIndex', (req, res) => {
+  res.header('Access-Control-Allow-Methods', 'DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.status(200).send();
+});
+
+router.delete('/api/upload/:countryId/:imageIndex', auth, async (req, res) => {
+  try {
+    const { countryId, imageIndex } = req.params;
+    
+    // Set CORS headers explicitly
+    res.header('Access-Control-Allow-Origin', req.headers.origin);
+    res.header('Access-Control-Allow-Credentials', true);
+    
+    // Here you would delete from Cloudinary and update your database
+    // For now, just return success
+    res.json({ success: true });
+    
+  } catch (error) {
+    console.error('Delete error:', error);
+    res.status(500).json({ error: 'Delete failed' });
+  }
+});
+
+export default router;
 
 // Middleware
 app.use(express.json({ limit: '1mb' }));
