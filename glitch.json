@@ -1,4 +1,24 @@
 {
-    "root": "server",
-    "start": "cd server && node server.js"
+  "install": "cd server && npm install",
+  "start": "cd server && node server.js",
+  "watch": {
+    "ignore": [
+      "\\.git",
+      "node_modules/**/node_modules",
+      "client/**"
+    ],
+    "install": {
+      "include": [
+        "^server/package\\.json$",
+        "^\\.env$"
+      ]
+    },
+    "restart": {
+      "include": [
+        "^server/.*\\.js$",
+        "^server/.*\\.json"
+      ]
+    },
+    "throttle": 1000
   }
+}
